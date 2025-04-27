@@ -1681,6 +1681,18 @@
 		
 		/* ----- LO DEL SCROLL UP-DOWN ----- */
 	    const contenedor_nav = document.getElementById('contenedor_nav');
+
+	window.addEventListener('wheel', (e) => {
+	      // Solo actuamos si hay desplazamiento horizontal
+	      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
+	        // Desplazamos el scroll interno de contenedor_nav
+	        contenedor_nav.scrollLeft += e.deltaX;
+
+	        // Opcional: prevenir que la página intente hacer scroll vertical accidental
+	        e.preventDefault();
+	      }
+	    }, { passive: false }); // Necesitamos passive: false para poder usar e.preventDefault()	
+		
 	    const pop_up = document.getElementById('pop_up');
 
 	    let hoverActivo = false;
