@@ -1,0 +1,1778 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sansflix | Tipografías con historia</title>
+		<link rel="icon" type="image/png" href="./img/favicon_sansflix.png" sizes="16x16"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	</head>
+	<body onload="cortinilla_inicial(); serie_al_azar();">
+		<div id="imagen_de_fondo"></div>
+		<div id="degradado_izq"></div>
+		<div id="degradado_sup"></div>
+		<div id="contenedor_general">
+			<div id="espacio_para_logo_sansflix"></div>
+			<div id="espacio_1"></div>
+			<div id="logo_serie"></div>
+			<div id="espacio_2"></div>
+			<div id="sinopsis_serie"></div>
+			<div id="espacio_3"></div>
+			<div id="autor_serie"></div>
+			<div id="espacio_4"></div>
+			<div id="adjetivos_serie"></div>
+		</div>
+		<div id="cortinilla_negra_para_cambio_de_serie"></div>
+		<div id="logo_sansflix"></div>
+		<div id="interrogante">?</div>
+		<div id="contenedor_nav">
+			<div id="contenedor_linea_blanca_horizontal"><div id="linea_blanca_horizontal"></div></div>
+			<div class="miniatura_siglo"><div class="circulo_blanco_siglo">1400</div></div>
+			<div id="miniatura_serie_28" onclick="cambiar_a_serie_28(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_28" class="logo_miniatura_serie"></div>
+			</div>
+			<div class="miniatura_siglo"><div class="circulo_blanco_siglo">1500</div></div>
+			<div id="miniatura_serie_01" onclick="cambiar_a_serie_01(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_01" class="logo_miniatura_serie"></div>
+			</div>
+			<div class="miniatura_siglo"><div class="circulo_blanco_siglo">1700</div></div>
+			<div id="miniatura_serie_02" onclick="cambiar_a_serie_02(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_02" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_03" onclick="cambiar_a_serie_03(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_03" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_04" onclick="cambiar_a_serie_04(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_04" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_05" onclick="cambiar_a_serie_05(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_05" class="logo_miniatura_serie"></div>
+			</div>
+			<div class="miniatura_siglo"><div class="circulo_blanco_siglo">1800</div></div>
+			<div id="miniatura_serie_06" onclick="cambiar_a_serie_06(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_06" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_07" onclick="cambiar_a_serie_07(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_07" class="logo_miniatura_serie"></div>
+			</div>
+			<div class="miniatura_siglo"><div class="circulo_blanco_siglo">1900</div></div>
+			<div id="miniatura_serie_08" onclick="cambiar_a_serie_08(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_08" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_09" onclick="cambiar_a_serie_09(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_09" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_10" onclick="cambiar_a_serie_10(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_10" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_11" onclick="cambiar_a_serie_11(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_11" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_12" onclick="cambiar_a_serie_12(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_12" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_13" onclick="cambiar_a_serie_13(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_13" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_14" onclick="cambiar_a_serie_14(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_14" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_15" onclick="cambiar_a_serie_15(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_15" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_16" onclick="cambiar_a_serie_16(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_16" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_17" onclick="cambiar_a_serie_17(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_17" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_18" onclick="cambiar_a_serie_18(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_18" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_19" onclick="cambiar_a_serie_19(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_19" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_20" onclick="cambiar_a_serie_20(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_20" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_21" onclick="cambiar_a_serie_21(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_21" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_22" onclick="cambiar_a_serie_22(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_22" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_23" onclick="cambiar_a_serie_23(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_23" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_24" onclick="cambiar_a_serie_24(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_24" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_25" onclick="cambiar_a_serie_25(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_25" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_26" onclick="cambiar_a_serie_26(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_26" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_27" onclick="cambiar_a_serie_27(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_27" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_29" onclick="cambiar_a_serie_29(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_29" class="logo_miniatura_serie"></div>
+			</div>
+			<div class="miniatura_siglo"><div class="circulo_blanco_siglo">2000</div></div>
+			<div id="miniatura_serie_30" onclick="cambiar_a_serie_30(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_30" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_31" onclick="cambiar_a_serie_31(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_31" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_32" onclick="cambiar_a_serie_32(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_32" class="logo_miniatura_serie"></div>
+			</div>
+			<div id="miniatura_serie_33" onclick="cambiar_a_serie_33(); cancelar_cambio_automatico();" class="miniatura_serie">
+				<div id="logo_miniatura_serie_33" class="logo_miniatura_serie"></div>
+			</div>	
+		</div>
+		<div id="fondo_pop_up"></div>
+		<div id="pop_up">
+			<div id="interior_pop_up"></div>
+			<div id="x_cerrar_pop_up">
+				<div class="asta_x" style="rotate: 45deg;"></div>
+				<div class="asta_x" style="rotate: -45deg;"></div>
+			</div>
+		</div>
+		<div id="cortinilla_negra_inicial">
+			<div id="logo_sansflix_en_la_cortinilla_inicial" style="top:50%"></div>
+		</div>
+	
+	<style>
+		/*
+		NOTAS:
+		*/
+		
+		* {
+			-webkit-tap-highlight-color: transparent;
+		}
+	    body {
+			font-family: sans-serif;
+			margin: 0;
+			padding: 0;
+			background: #1a1a1a;
+			color: white;
+	    }
+		a {
+			position: relative;
+			list-style: none;
+			text-decoration: none;
+			cursor: pointer;
+			color: #4fcaff;
+		}
+		a:hover {list-style: none;}
+		a:focus {list-style: none;}
+		a:active {list-style: none;}
+		#cortinilla_negra_inicial {
+			display: block;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+	     	width: 100%;
+			height: 100vh;
+			animation-name: cortinilla_inicial;
+			animation-duration: 2s;
+			background-color: black;
+			opacity: 0;
+		}
+		@keyframes cortinilla_inicial {
+			0% {opacity: 1;}
+			40% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+		#cortinilla_negra_para_cambio_de_serie {
+			display: none;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+	     	width: 100%;
+			height: 100%;
+			animation-name: cortinilla_cambio_de_serie;
+			animation-duration: 1s;
+			background-color: black;
+			opacity: 0;
+		}
+		@keyframes cortinilla_cambio_de_serie {
+			0% {opacity: 0;}
+			35% {opacity: 1;}
+			40% {opacity: 1;}
+			100% {opacity: 0;}
+		}
+		#logo_sansflix_en_la_cortinilla_inicial {
+			position: absolute;
+			width: 192px;
+			height: 52px;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-image: url("./img/logo_sansflix.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+	    #imagen_de_fondo {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+	     	width: 100%;
+			height: 100vh;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: center;
+			background-size: cover;
+	    }
+	    #degradado_sup {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+	     	width: 100%;
+			height: 80px;
+			background-image: linear-gradient(to bottom, rgba(0,0,0,1) , rgba(0,0,0,0));
+			opacity: .7;
+	    }
+	    #degradado_izq {
+			position: fixed;
+			left: 0px;
+			top: 0px;
+	     	width: 100%;
+			height: 100vh;
+			background-image: linear-gradient(to right, rgba(0,0,0,1) , rgba(0,0,0,0));
+	    }
+		#contenedor_general {
+			position: fixed;
+			left: 70px;
+			top: 40px;
+			width: 700px;
+		}
+		#logo_sansflix {
+			position: fixed;
+			left: 70px;
+			top: 40px;
+			width: 192px;
+			height: 52px;
+			cursor: pointer;
+			background-image: url("./img/logo_sansflix.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		#espacio_para_logo_sansflix {
+			position: relative;
+			width: 192px;
+			height: 52px;
+		}
+		#espacio_1 {
+			position: relative;
+			width: 100%;
+			height: 25px;
+		}
+		#logo_serie {
+			position: relative;
+			width: 100%;
+			height: 263px;
+			cursor: pointer;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		#interrogante {
+			display: block;
+			position: absolute;
+			top: 40px;
+			right: 48px;
+			width: 34px;
+			height: 34px;
+			border-radius: 50%;
+			border: 3px solid white;
+			color: white;
+			font-family: "Roboto", sans-serif;
+			font-size: 23px;
+			font-weight: 400;
+			line-height: 34px;
+			text-align: center;
+			cursor: pointer;
+			transition: .2s;
+			opacity: .7;
+		}
+		#interrogante:hover {
+			opacity: 1;
+		}
+		#espacio_2 {
+			position: relative;
+			width: 100%;
+			height: 45px;
+		}
+		#sinopsis_serie {
+			position: relative;
+			width: 100%;
+			font-family: "Roboto", sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+		}
+		#espacio_3 {
+			position: relative;
+			width: 100%;
+			height: 25px;
+		}
+		#autor_serie {
+			position: relative;
+			width: 100%;
+			font-family: "Roboto", sans-serif;
+			font-size: 18px;
+			font-weight: 700;
+		}
+		#espacio_4 {
+			position: relative;
+			width: 100%;
+			height: 25px;
+		}
+		#adjetivos_serie {
+			position: relative;
+			width: 100%;
+			font-family: "Roboto", sans-serif;
+			font-size: 18px;
+			font-weight: 500;
+		}
+		
+		/*NAVEGACIÓN*/
+		#contenedor_nav {
+			position: fixed;
+			display: flex;
+			flex-direction: row;
+			left: 0px;
+			bottom: 0px;
+			width: 100%;
+			height: 110px;
+			transition: .4s;
+			overflow: scroll;
+		}
+		.miniatura_serie {
+			position: relative;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 30px;
+			min-width: 190px;
+			height: 260px;
+			border-radius: 20px;
+			cursor: pointer;
+			box-shadow: 0px 0px 10px black;
+			transition: .2s;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+		.miniatura_serie:hover {
+			margin-top: 10px;
+		}
+		.logo_miniatura_serie {
+			position: absolute;
+			left: 0px;
+			top: 95px;
+			width: 100%;
+			height: 71px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		.miniatura_siglo {
+			position: relative;
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 30px;
+			min-width: 130px;
+			height: 260px;
+			border-radius: 20px;
+		}
+		.circulo_blanco_siglo {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 90px;
+			height: 90px;
+			border-radius: 50%;
+			background-color: white;
+			box-shadow: 0px 0px 20px black;
+			color: #1a1a1a;
+			font-family: "Roboto", sans-serif;
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 90px;
+			text-align: center;
+		}
+		#contenedor_linea_blanca_horizontal {
+			position: absolute;
+			left: 75px;
+			margin-top: 30px;
+			width: 6225px;
+			height: 260px;
+		}
+		#linea_blanca_horizontal {
+			position: absolute;
+			top: 50%;
+			width: inherit;
+			height: 2px;
+			background-color: white;
+			box-shadow: 0px 0px 10px black;
+			opacity: 1;
+			transition: .4s;
+		}
+		
+		/*PUP-UP*/
+		#fondo_pop_up {
+			display: none;
+			position: fixed;
+			left: 0px;
+			top: 0px;
+			height: 0px;
+	     	width: 100%;
+			height: 100%;
+			animation-name: entrada_con_opacidad;
+			animation-duration: 0.4s;
+			background-color: rgba(0,0,0,0.7);
+		}
+		#pop_up {
+			display: none;
+			position: fixed;
+			width: 800px;
+			height: 500px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			animation-name: entrada_con_opacidad;
+			animation-duration: .5s;
+			background-color: #1a1a1a;
+			box-shadow: 0px 0px 30px black;
+			overflow: scroll;
+		}
+		@keyframes entrada_con_opacidad {
+		  from {opacity: 0;}
+		  to {opacity: 1;}
+		}
+		#x_cerrar_pop_up {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+		}
+		.asta_x {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			height: 1px;
+			background-color: white;
+		}
+		#interior_pop_up {
+			margin: 35px;
+			font-family: "Roboto", sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 1.4em;
+		}
+		#logo_easd {
+			margin-top: 40px;
+			width: 400px;
+			height: 98px;
+			background-image: url("./img/logos_easdfe&educacion_blanco_sin_fondo_980x241.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		#contenedor_anatomia {
+			position: relative;
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 28px;
+		}
+		.anatomia {
+			min-width: 120px;
+			height: 120px;
+			margin-right: 20px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+		}
+		
+		/*MOBILE*/
+		@media screen and (max-width: 840px) {
+		    #degradado_izq {background-image: linear-gradient(to right, rgba(0,0,0,.8) , rgba(0,0,0,.3));}
+			#contenedor_general {left: 6vw; top: 25px; width: 88vw;}
+			#logo_sansflix {left: 6vw; top: 25px; width: 156px; height: 42px;}
+			#interrogante {
+				top: 23px;
+				right: 6vw;
+				width: 32px;
+				height: 32px;
+				font-size: 22px;
+				line-height: 32px;
+				opacity: .5;
+			}
+			#espacio_para_logo_sansflix {width: 156px; height: 42px;}
+			#logo_serie {height: 33vw;}
+			.miniatura_serie {margin-top: 10px;}
+			.miniatura_serie:hover {margin-top: 10px;}
+			.miniatura_siglo {margin-top: 10px;}
+			#contenedor_linea_blanca_horizontal {margin-top: 10px;}
+			#sinopsis_serie {font-size: 16px;}
+			#autor_serie {font-size: 16px;}
+			#adjetivos_serie {font-size: 16px;}
+			#espacio_2 {height: 30px;}
+			#espacio_3 {height: 20px;}
+			#espacio_4 {height: 20px;}
+			#pop_up {width: 88vw;}
+			#x_cerrar_pop_up {top: 20px; right: 16px; width: 36px; height: 36px;}
+			#interior_pop_up {margin: 25px;}
+			#logo_easd {margin-top: 30px; width: 260px; height: 64px;}
+			#contenedor_anatomia {margin-bottom: 28px;}
+			.anatomia {min-width: 75px; height: 75px; margin-right: 15px;}
+		}
+	</style>
+	<style></style>
+	<style>	
+		/*IMÁGENES DE CADA SERIE*/
+		#miniatura_serie_01 {background-image: url("./img/fondos/fondo_01.jpg");}
+		#miniatura_serie_02 {background-image: url("./img/fondos/fondo_02.jpg");}
+		#miniatura_serie_03 {background-image: url("./img/fondos/fondo_03.jpg");}
+		#miniatura_serie_04 {background-image: url("./img/fondos/fondo_04.jpg");}
+		#miniatura_serie_05 {background-image: url("./img/fondos/fondo_05.jpg");}
+		#miniatura_serie_06 {background-image: url("./img/fondos/fondo_06.jpg");}
+		#miniatura_serie_07 {background-image: url("./img/fondos/fondo_07.jpg");}
+		#miniatura_serie_08 {background-image: url("./img/fondos/fondo_08.jpg");}
+		#miniatura_serie_09 {background-image: url("./img/fondos/fondo_09.jpg");}
+		#miniatura_serie_10 {background-image: url("./img/fondos/fondo_10.jpg");}
+		#miniatura_serie_11 {background-image: url("./img/fondos/fondo_11.jpg");}
+		#miniatura_serie_12 {background-image: url("./img/fondos/fondo_12.jpg"); display: none;}
+		#miniatura_serie_13 {background-image: url("./img/fondos/fondo_13.jpg"); display: none;}
+		#miniatura_serie_14 {background-image: url("./img/fondos/fondo_14.jpg"); display: none;}
+		#miniatura_serie_15 {background-image: url("./img/fondos/fondo_15.jpg");}
+		#miniatura_serie_16 {background-image: url("./img/fondos/fondo_16.jpg"); display: none;}
+		#miniatura_serie_17 {background-image: url("./img/fondos/fondo_17.jpg"); display: none;}
+		#miniatura_serie_18 {background-image: url("./img/fondos/fondo_18.jpg");}
+		#miniatura_serie_19 {background-image: url("./img/fondos/fondo_19.jpg");}
+		#miniatura_serie_20 {background-image: url("./img/fondos/fondo_20.jpg");}
+		#miniatura_serie_21 {background-image: url("./img/fondos/fondo_21.jpg");}
+		#miniatura_serie_22 {background-image: url("./img/fondos/fondo_22.jpg");}
+		#miniatura_serie_23 {background-image: url("./img/fondos/fondo_23.jpg");}
+		#miniatura_serie_24 {background-image: url("./img/fondos/fondo_24.jpg");}
+		#miniatura_serie_25 {background-image: url("./img/fondos/fondo_25.jpg");}
+		#miniatura_serie_26 {background-image: url("./img/fondos/fondo_26.jpg");}
+		#miniatura_serie_27 {background-image: url("./img/fondos/fondo_27.jpg"); display: none;}
+		#miniatura_serie_28 {background-image: url("./img/fondos/fondo_28.jpg");}
+		#miniatura_serie_29 {background-image: url("./img/fondos/fondo_29.jpg");}
+		#miniatura_serie_30 {background-image: url("./img/fondos/fondo_30.jpg");}
+		#miniatura_serie_31 {background-image: url("./img/fondos/fondo_31.jpg");}
+		#miniatura_serie_32 {background-image: url("./img/fondos/fondo_32.jpg"); display: none;}
+		#miniatura_serie_33 {background-image: url("./img/fondos/fondo_33.jpg");}
+		
+		#logo_miniatura_serie_01 {background-image: url("./img/logos/logo_01.png");}
+		#logo_miniatura_serie_02 {background-image: url("./img/logos/logo_02.png");}
+		#logo_miniatura_serie_03 {background-image: url("./img/logos/logo_03.png");}
+		#logo_miniatura_serie_04 {background-image: url("./img/logos/logo_04.png");}
+		#logo_miniatura_serie_05 {background-image: url("./img/logos/logo_05.png");}
+		#logo_miniatura_serie_06 {background-image: url("./img/logos/logo_06.png");}
+		#logo_miniatura_serie_07 {background-image: url("./img/logos/logo_07.png");}
+		#logo_miniatura_serie_08 {background-image: url("./img/logos/logo_08.png");}
+		#logo_miniatura_serie_09 {background-image: url("./img/logos/logo_09.png");}
+		#logo_miniatura_serie_10 {background-image: url("./img/logos/logo_10.png");}
+		#logo_miniatura_serie_11 {background-image: url("./img/logos/logo_11.png");}
+		#logo_miniatura_serie_12 {background-image: url("./img/logos/logo_12.png");}
+		#logo_miniatura_serie_13 {background-image: url("./img/logos/logo_13.png");}
+		#logo_miniatura_serie_14 {background-image: url("./img/logos/logo_14.png");}
+		#logo_miniatura_serie_15 {background-image: url("./img/logos/logo_15.png");}
+		#logo_miniatura_serie_16 {background-image: url("./img/logos/logo_16.png");}
+		#logo_miniatura_serie_17 {background-image: url("./img/logos/logo_17.png");}
+		#logo_miniatura_serie_18 {background-image: url("./img/logos/logo_18.png");}
+		#logo_miniatura_serie_19 {background-image: url("./img/logos/logo_19.png");}
+		#logo_miniatura_serie_20 {background-image: url("./img/logos/logo_20.png");}
+		#logo_miniatura_serie_21 {background-image: url("./img/logos/logo_21.png");}
+		#logo_miniatura_serie_22 {background-image: url("./img/logos/logo_22.png");}
+		#logo_miniatura_serie_23 {background-image: url("./img/logos/logo_23.png");}
+		#logo_miniatura_serie_24 {background-image: url("./img/logos/logo_24.png");}
+		#logo_miniatura_serie_25 {background-image: url("./img/logos/logo_25.png");}
+		#logo_miniatura_serie_26 {background-image: url("./img/logos/logo_26.png");}
+		#logo_miniatura_serie_27 {background-image: url("./img/logos/logo_27.png");}
+		#logo_miniatura_serie_28 {background-image: url("./img/logos/logo_28.png");}
+		#logo_miniatura_serie_29 {background-image: url("./img/logos/logo_29.png");}
+		#logo_miniatura_serie_30 {background-image: url("./img/logos/logo_30.png");}
+		#logo_miniatura_serie_31 {background-image: url("./img/logos/logo_31.png");}
+		#logo_miniatura_serie_32 {background-image: url("./img/logos/logo_32.png");}
+		#logo_miniatura_serie_33 {background-image: url("./img/logos/logo_33.png");}
+		
+	</style>
+	
+	<script>
+		function cortinilla_inicial() {
+			setTimeout(function(){
+				document.getElementById("cortinilla_negra_inicial").style.display = "none";
+			}, 2000);
+		}
+		function abrir_pop_up_sobre_el_proyecto() {
+			document.getElementById("interior_pop_up").innerHTML = '<span style="font-weight: 200; font-size: 26px;">¿Qué es <em>Sansflix</em>?</span><br><br><span style="font-weight: 700;"><em>Sansflix</em></span> es un proyecto creativo de divulgación de la historia de la tipografía realizado por el alumnado del <span style="font-weight: 700;">Ciclo Formativo de Grado Superior de Gráfica Publicitaria</span> de la <a href="https://www.escueladeartetenerife.com/" target="_blank"><span style="font-weight: 700;">Escuela de Arte y Superior de Diseño Fernando Estévez</span></a> durante el curso 2024/2025.<br><br>Esta acción creativa se ha llevado a cabo en el módulo de Tipografía del primer curso, y se ha dividido en tres fases:<br><br><span style="font-weight: 800; color: #e50913;">1 |</span> En primer lugar, cada estudiante ha elegido una <span style="font-weight: 700;">tipografía relevante</span> dentro de la historia del diseño tipográfico, y ha indagado en sus orígenes, morfología y connotaciones semánticas.<br><br><span style="font-weight: 800; color: #e50913;">2 |</span> Tras este primer estudio, cada estudiante ha redactado una <span style="font-weight: 700;">sinopsis creativa</span> de una hipotética serie cuya trama está inspirada por la historia de la tipografía elegida.<br><br><span style="font-weight: 800; color: #e50913;">3 |</span> Por último, cada estudiante ha diseñado un <span style="font-weight: 700;">logotipo</span> para dicha serie &mdash;cuyo título coincide con el nombre de la tipografía elegida en cada caso&mdash;, y ha seleccionado una imagen de fondo para su reforzar su mensaje.<br><br>Todas estas propuestas se han reunido bajo el nombre de <span style="font-weight: 700;"><em>Sansflix</em></span>, un sitio web para divulgar la historia de la tipografía inspirado en las plataformas de <em>streaming</em>.<br><br><span style="font-weight: 700;">Alumnado participante:</span><br>Alondra Álvarez de León Machado<br>Carla Barrera Afonso<br>Verónica Ciria Ayuso<br>Victoria Concepción Lozano<br>Marina Dorta Cacho<br>Jael Expósito Rodeiro<br>Rita Fanaru Rodríguez<br>Lucía García Díaz<br>Carlos González Calimano González<br>Athenery González Montañez<br>Dafne Hernández Chica<br>Enya Hernández Rodríguez<br>Ithaisa Luis Martín<br>Josefina Ñíguez De León<br>Luis David Polisano Herrera<br>Nayara Ramos Hernández<br>Esther Rodríguez Herrera<br>Daniela Rodríguez Pérez<br>Alejandra Rodríguez Zamora<br><br><span style="font-weight: 700;">Profesor:</span> Javier González Vega<div id="logo_easd"></div>';//
+			document.getElementById("fondo_pop_up").style.display = "block";
+			document.getElementById("pop_up").style.display = "block";
+		}
+		document.getElementById("logo_sansflix").addEventListener("click", function() {abrir_pop_up_sobre_el_proyecto();});
+		document.getElementById("interrogante").addEventListener("click", function() {abrir_pop_up_sobre_el_proyecto();});
+		document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("interior_pop_up").innerHTML = 'Historia de la tipografía 01';//
+			document.getElementById("fondo_pop_up").style.display = "block";
+			document.getElementById("pop_up").style.display = "block";
+		});
+		document.getElementById("x_cerrar_pop_up").addEventListener("click", function() {
+			document.getElementById("fondo_pop_up").style.display = "none";
+			document.getElementById("pop_up").style.display = "none";
+		});
+		document.getElementById("fondo_pop_up").addEventListener("click", function() {
+			document.getElementById("fondo_pop_up").style.display = "none";
+			document.getElementById("pop_up").style.display = "none";
+		});
+		
+		var cambio_automatico = 'si';
+		const lista_de_series = [
+			cambiar_a_serie_01,
+			cambiar_a_serie_02,
+			cambiar_a_serie_03,
+			cambiar_a_serie_04,
+			cambiar_a_serie_05,
+			cambiar_a_serie_06,
+			cambiar_a_serie_07,
+			cambiar_a_serie_08,
+			cambiar_a_serie_09,
+			cambiar_a_serie_10,
+			cambiar_a_serie_11,
+			cambiar_a_serie_15,
+			cambiar_a_serie_18,
+			cambiar_a_serie_19,
+			cambiar_a_serie_20,
+			cambiar_a_serie_21,
+			cambiar_a_serie_22,
+			cambiar_a_serie_23,
+			cambiar_a_serie_24,
+			cambiar_a_serie_25,
+			cambiar_a_serie_26,
+			cambiar_a_serie_28,
+			cambiar_a_serie_29,
+			cambiar_a_serie_30,
+			cambiar_a_serie_31,
+			cambiar_a_serie_33,
+		];
+		function serie_al_azar() {
+			if (cambio_automatico == 'si') {
+				serie_elegida = lista_de_series[Math.floor(Math.random()*lista_de_series.length)];
+				serie_elegida();
+				setTimeout(function(){serie_al_azar();}, 10000);
+			}
+			else if (cambio_automatico == 'no') {;};
+		}
+		function cancelar_cambio_automatico() {
+			cambio_automatico = 'no';
+			setTimeout(function(){
+				cambio_automatico = 'si';
+				serie_al_azar();
+			}, 360000);
+		}
+		
+		function cambiar_a_serie_01() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_01.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_01.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_01.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_01.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_01.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_01.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_01.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_01.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_01.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_02() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_02.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_02.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_02.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_02.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_02.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_02.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_02.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_02.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_02.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_03() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_03.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_03.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_03.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_03.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_03.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_03.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_03.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_03.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_03.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_04() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_04.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_04.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_04.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_04.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_04.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_04.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_04.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_04.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_04.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_05() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_05.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_05.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_05.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_05.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_05.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_05.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_05.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_05.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_05.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_06() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_06.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_06.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_06.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_06.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_06.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_06.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_06.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_06.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_06.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_07() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_07.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_07.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_07.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_07.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_07.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_07.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_07.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_07.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_07.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_08() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_08.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_08.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_08.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_08.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_08.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_08.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_08.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_08.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_08.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_09() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_09.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_09.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_09.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_09.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_09.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_09.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_09.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_09.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_09.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_10() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_10.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_10.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_10.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_10.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_10.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_10.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_10.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_10.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_10.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_11() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_11.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_11.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_11.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_11.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_11.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_11.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_11.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_11.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_11.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_12() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_12.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_12.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_12.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_12.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_12.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_12.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_12.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_12.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_12.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_13() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_13.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_13.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_13.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_13.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_13.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_13.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_13.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_13.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_13.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_14() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_14.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_14.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_14.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_14.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_14.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_14.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_14.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_14.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_14.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_15() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_15.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_15.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_15.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_15.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_15.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_15.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_15.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_15.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_15.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_16() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_16.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_16.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_16.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_16.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_16.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_16.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_16.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_16.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_16.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_17() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_17.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_17.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_17.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_17.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_17.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_17.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_17.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_17.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_17.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_18() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_18.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_18.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_18.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_18.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_18.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_18.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_18.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_18.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_18.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_19() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_19.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_19.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_19.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_19.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_19.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_19.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_19.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_19.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_19.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_20() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_20.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_20.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_20.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_20.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_20.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_20.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_20.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_20.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_20.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_21() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_21.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_21.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_21.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_21.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_21.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_21.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_21.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_21.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_21.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_22() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_22.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_22.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_22.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_22.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_22.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_22.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_22.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_22.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_22.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_23() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_23.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_23.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_23.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_23.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_23.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_23.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_23.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_23.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_23.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_24() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_24.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_24.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_24.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_24.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_24.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_24.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_24.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_24.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_24.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_25() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_25.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_25.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_25.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_25.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_25.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_25.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_25.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_25.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_25.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_26() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_26.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_26.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_26.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_26.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_26.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_26.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_26.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_26.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_26.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_27() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_27.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_27.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_27.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_27.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_27.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_27.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_27.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_27.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_27.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_28() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_28.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_28.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_28.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_28.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_28.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_28.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_28.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_28.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_28.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_29() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_29.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_29.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_29.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_29.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_29.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_29.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_29.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_29.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_29.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_30() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_30.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_30.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_30.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_30.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_30.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_30.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_30.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_30.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_30.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_31() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_31.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_31.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_31.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_31.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_31.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_31.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_31.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_31.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_31.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_32() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_32.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_32.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_32.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_32.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_32.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_32.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_32.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_32.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_32.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		function cambiar_a_serie_33() {
+			document.getElementById("logo_serie").addEventListener("click", function() {
+				document.getElementById("interior_pop_up").innerHTML = serie_33.historia;//
+				document.getElementById("anatomia_a").style.backgroundImage = serie_33.anatomia_a;
+				document.getElementById("anatomia_b").style.backgroundImage = serie_33.anatomia_b;
+				document.getElementById("anatomia_c").style.backgroundImage = serie_33.anatomia_c;
+				document.getElementById("fondo_pop_up").style.display = "block";
+				document.getElementById("pop_up").style.display = "block";
+			});
+			document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "block";
+			setTimeout(function(){
+				document.getElementById("imagen_de_fondo").style.backgroundImage = serie_33.fondo;
+				document.getElementById("logo_serie").style.backgroundImage = serie_33.logo;
+				document.getElementById("sinopsis_serie").innerHTML = serie_33.sinopsis;
+				document.getElementById("autor_serie").innerHTML = serie_33.autor;
+				document.getElementById("adjetivos_serie").innerHTML = serie_33.adjetivos;
+			}, 350);
+			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
+		}
+		
+		const serie_28 = {
+			fondo: 'url("./img/fondos/fondo_28.jpg")',
+			logo: 'url("./img/logos/logo_28.png")',
+			sinopsis: 'Jenson es un detective privado atrapado entre el bien y el mal. Cuando recibe un caso personal, se enfrenta a un misterio que pone en peligro su vida y su moral.',//
+			autor: 'Nicholas Jenson · 1470',
+			adjetivos: 'Old-style',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">JENSON</span><br><br>La tipografía Jenson fue creada en 1470 por Nicolas Jenson, un grabador y tipógrafo francés que trabajaba en Venecia. Su diseño se inspiró en las letras romanas clásicas y en la escritura humanista de la época. Esta tipografía fue una de las primeras romanas utilizadas para imprimir libros, en reemplazo de las góticas más difíciles de leer.<br><br>El diseño de Jenson marcó un punto de inflexión en la historia de la tipografía, estableciendo las bases del estilo <em>old style</em> (antiguo) con serifas elegantes, ejes inclinados y gran legibilidad. Su influencia fue tan fuerte que muchos tipos posteriores se basaron en ella.<br><br>En el siglo XX, Robert Slimbach diseñó Adobe Jenson (1996), una versión digital moderna fiel al estilo original pero optimizada para impresión y pantallas.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_28a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_28b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_28c.png")',
+		};//1470 Jenson Jael
+		const serie_01 = {
+			fondo: 'url("./img/fondos/fondo_01.jpg")',
+			logo: 'url("./img/logos/logo_01.png")',
+			sinopsis: 'París, 1530. Entre intrigas cortesanas y conflictos religiosos, una joven desafía el poder con su intelecto, luchando por difundir el conocimiento en una Europa que arde en transformación.',//
+			autor: 'Claude Garamond · 1530',
+			adjetivos: 'Garalda · Clásica · Sofisticada',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">GARAMOND</span><br><br>Garamond es una de las tipografías más antiguas aún en uso, creada por el impresor y tipógrafo francés Claude Garamond hacia 1530. Inspirada en la caligrafía humanista del Renacimiento, destaca por su elegancia, proporciones armoniosas y excelente legibilidad. A lo largo de los siglos, ha sido adaptada en múltiples versiones, consolidándose como un estándar en el diseño editorial y académico.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_01a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_01b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_01c.png")',
+		};//1530 Garamond Rita
+		const serie_02 = {
+			fondo: 'url("./img/fondos/fondo_02.jpg")',
+			logo: 'url("./img/logos/logo_02.png")',
+			sinopsis: 'Bajo la lluvia perpetua, un detective sin nombre recorre callejones donde la verdad se esconde tras cada sombra. En esta ciudad, nadie es inocente... solo más difícil de atrapar.',//
+			autor: 'William Caslon · 1722',
+			adjetivos: 'Serifa Antigua · clásica · elegante',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CASLON</span><br><br>La tipografía Caslon reconocida por su elegancia, legibilidad y carácter clásico, fue muy usada en el siglo XVIII y aparece en documentos históricos importantes, como la Declaración de Independencia de EE. UU. Su estilo transmite tradición y autoridad, lo que la hace ideal para textos impresos formales y editoriales.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_02a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_02b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_02c.png")',
+		};//1722 Caslon Luis David
+		const serie_03 = {
+			fondo: 'url("./img/fondos/fondo_03.jpg")',
+			logo: 'url("./img/logos/logo_03.png")',
+			sinopsis: 'Birmingham, 1757. La familia Baskerville controla todos los negocios del país. Entre traiciones, caídas y pactos rotos, esta familia mafiosa escribirá su historia con sangre... y billetes.',//
+			autor: 'John Baskerville · 1757',
+			adjetivos: 'Transicional · Violencia · Sombría',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BASKERVILLE</span><br><br>La tipografía Baskerville fue creada en 1757 por el impresor y tipógrafo inglés John Baskerville, un perfeccionista apasionado por el diseño, la impresión y la elegancia en la tipografía. Surgió en un período de transición entre las tipografías antiguas, como Garamond, y las modernas, como Bodoni, por lo que se clasifica como una tipografía de transición.<br><br>En su época, su trabajo fue duramente criticado. Muchos consideraban que su tipo era demasiado brillante y fino para la tecnología de impresión de entonces.<br><br>A pesar de las críticas, su trabajo fue admirado por figuras importantes, como Benjamin Franklin, quien ayudó a difundir su uso en América. Con el tiempo, Baskerville se convirtió en una tipografía influyente, que inspiró a diseñadores posteriores.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_03a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_03b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_03c.png")',
+		};//1757 Baskerville Carlos
+		const serie_04 = {
+			fondo: 'url("./img/fondos/fondo_04.jpg")',
+			logo: 'url("./img/logos/logo_04.png")',
+			sinopsis: 'Cuando la obsesión por la perfección tipográfica toma el control, la línea entre el arte y la locura comienza a desvanecerse.',//
+			autor: 'Firmin Didot · 1784',
+			adjetivos: 'Neoclásica · Thriller psicológico · Arte',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">DIDOT</span><br><br>Didot es una familia de fuentes tipográficas desarrollada entre 1784 y 1811 por Firmin Didot en París y usada por su hermano Pierre Didot en la imprenta. Inspirada en el trabajo de John Baskerville, la tipografía Didot se caracteriza por su alto contraste entre trazos gruesos y finos, lo que la define como neoclásica y se categoriza como <em>Romanas Modernas</em> o <em>Didonas</em>.<br><br>Con el tiempo, su diseño ha sido adaptado para la era digital, con reediciones destacadas como las de Adrian Frutiger y Jonathan Hoefler. Su estética elegante sigue influyendo en la tipografía moderna y ha sido ampliamente utilizada en la moda y la edición de lujo, destacando en marcas como Vogue. Hoy, sigue siendo símbolo de elegancia y precisión tipográfica.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_04a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_04b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_04c.png")',
+		};//1784 Didot Vero
+		const serie_05 = {
+			fondo: 'url("./img/fondos/fondo_05.jpg")',
+			logo: 'url("./img/logos/logo_05.png")',
+			sinopsis: 'En una sociedad donde lo idílico y la perfección reinan sobre todo, surge una revolución que lo cambia todo para dar paso a un nuevo mundo.',//
+			autor: 'Giambattista Bodoni · 1787',
+			adjetivos: 'Didona · Acción · Elegante',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BODONI</span><br><br>La tipografía Bodoni fue creada a finales del siglo XVIII por el diseñador tipográfico italiano Giambattista Bodoni. Bodoni buscaba crear una tipografía que reflejara los ideales del Neoclasicismo, caracterizado por su enfoque en la simetría, la claridad y la elegancia.<br><br>Bodoni se inspiró en las formas geométricas y las proporciones clásicas de la antigua Roma, combinándolas con elementos modernos y un estilo distintivo. Su diseño se caracteriza por líneas finas, contraste pronunciado entre los trazos gruesos y delgados, y serifas afiladas y uniformes.<br><br>A lo largo del siglo XIX, la tipografía Bodoni ganó una amplia popularidad en toda Europa, convirtiéndose en una de las tipografías más utilizadas en la impresión de libros, revistas y carteles.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_05a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_05b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_05c.png")',
+		};//1787 Bodoni Daniela
+		const serie_06 = {
+			fondo: 'url("./img/fondos/fondo_06.jpg")',
+			logo: 'url("./img/logos/logo_06.png")',
+			sinopsis: 'En 1882, la próspera ciudad de Clarendon es el último refugio antes del desierto sin ley. La llegada de un forastero con un pasado oscuro desata una guerra entre terratenientes, bandidos y soldados corruptos. Entre duelos y traiciones, el pueblo se convierte en un campo de batalla por el control de la región. En Clarendon, la justicia es solo otra bala en la recámara.',//
+			autor: 'Robert Besley · 1845',
+			adjetivos: 'Humanista · Robusta · Impactante',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CLARENDON</span><br><br>Clarendon fue creada en 1845 por Robert Besley en la Fann Street Foundry de Londres, y grabada por Benjamin Fox. Fue la primera tipografía en ser registrada legalmente como diseño tipográfico, lo que marcó un hito en la protección de la propiedad intelectual en el diseño de letras.<br><br>Originalmente, Clarendon fue concebida como una tipografía de énfasis, pensada para ser utilizada junto a otras tipografías romanas en los cuerpos de texto, como una especie de "negrita elegante". Su estilo slab serif con serifas gruesas y rectangulares le daba una fuerte presencia visual sin perder legibilidad.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_06a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_06b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_06c.png")',
+		};//1845 Clarendon Jael
+		const serie_07 = {
+			fondo: 'url("./img/fondos/fondo_07.jpg")',
+			logo: 'url("./img/logos/logo_07.png")',
+			sinopsis: 'Un grupo de amigos se cuela en una fundición tipográfica en ruinas. Pronto descubrirán que no están solos. ¿Quién los acecha? ¿Qué ocurrió en ese lugar?',//
+			autor: 'H. Berthold · 1896',
+			adjetivos: 'Grotesca · Angustia · Inquietante',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">AKZIDENZ GROTESK</span><br><br>La Akzidenz Grotesk, también conocida como Berthold Akzidenz Grotesk u Odd-job Sansserif, es un tipo de letra paloseco o sans serif diseñado por la fundidora de tipos H. Berthold de la ciudad de Berlín en el año de 1896; esta fundición sirvió de inspiración para que Max Miedinger creara en 1957 el tipo de letra Helvética, una de las más importantes muestras del grafismo racionalista de la Escuela Suiza de mediados del siglo XX.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_07a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_07b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_07c.png")',
+		};//1896 Akzidenz Grotesk Marina
+		const serie_08 = {
+			fondo: 'url("./img/fondos/fondo_08.jpg")',
+			logo: 'url("./img/logos/logo_08.png")',
+			sinopsis: 'Entre lápidas y silencio, una restauradora descubre un lenguaje oculto en la piedra. Letras finas revelan secretos antiguos: confesiones de un asesino que convirtió la tipografía en su firma eterna.',//
+			autor: 'Frederic W. Goudy · 1901',
+			adjetivos: 'Incisa · Suspense psicológico · Misterio',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COPPERPLATE GOTHIC</span><br><br>Copperplate Gothic fue diseñada en 1901 por Frederic W. Goudy para la fundición tipográfica American Type Founders. A pesar de su nombre, no pertenece a la familia de las letras góticas tradicionales. Su diseño combina mayúsculas con pequeñas serifas, inspirado en el estilo de grabado en placas de cobre. Se creó para usarse en impresiones formales y elegantes, como tarjetas de presentación, membretes, placas profesionales y documentos legales. La ausencia de minúsculas le da un carácter sobrio y distintivo. Su apariencia mezcla tradición y modernidad, y ha perdurado como una tipografía reconocible por su fuerza, claridad y autoridad visual.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_08a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_08b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_08c.png")',
+		};//1901 Copperplate Gothic Victoria
+		const serie_09 = {
+			fondo: 'url("./img/fondos/fondo_09.jpg")',
+			logo: 'url("./img/logos/logo_09.png")',
+			sinopsis: 'En una ciudad vigilada por el poder, un agente secreto pone en juego su identidad y su vida. La misión es clara: desmantelar el sistema desde dentro, cueste lo que cueste.',//
+			autor: 'Morris Fuller Benton · 1902',
+			adjetivos: 'Neogrotesca · Espionaje · Drama político',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FRANKLIN GOTHIC</span><br><br>La Franklin Gothic es una tipografía sans serif creada en 1902 por Morris Fuller Benton para la American Type Founders (ATF). Diseñada para ser fuerte, clara y legible, se convirtió rápidamente en una fuente popular para titulares en periódicos, publicidad y anuncios oficiales. Su estilo robusto y serio le dio un aire de autoridad que la mantuvo vigente durante décadas. A lo largo del tiempo, ha sido rediseñada y adaptada digitalmente, manteniendo su esencia original. Franklin Gothic es considerada un ícono del diseño tipográfico estadounidense y sigue usándose ampliamente por su versatilidad, fuerza visual y tono institucional sin perder modernidad.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_09a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_09b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_09c.png")',
+		};//1902 Franklin Gothic Victoria
+		const serie_10 = {
+			fondo: 'url("./img/fondos/fondo_10.jpg")',
+			logo: 'url("./img/logos/logo_10.png")',
+			sinopsis: 'Existe una última oportunidad. En una sociedad donde los avances tecnológicos han acabado con el mundo tal y como se conocía, se descubre lo que podría cambiar el destino de la humanidad: los viajes en el tiempo.',//
+			autor: 'Paul Renner · 1927',
+			adjetivos: 'Geométrica · Suspense · Moderna',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FUTURA</span><br><br>Futura es una tipografía geométrica sans-serif creada en 1927 por el diseñador alemán Paul Renner, quien se inspiró en las corrientes artísticas y de diseño de su época, especialmente en las ideas de la Bauhaus y el modernismo. Renner buscaba romper con las formas tradicionales de la tipografía, impulsando una estética más racional y funcional basada en formas geométricas puras como círculos, triángulos y rectángulos. Esta apuesta por la simplicidad y la claridad visual fue revolucionaria, marcando un antes y un después en el mundo del diseño gráfico.<br><br>El diseño de Futura se consolidó rápidamente como un símbolo de modernidad y progreso, siendo adoptado en múltiples campos, desde la publicidad y el diseño editorial hasta la arquitectura y el diseño industrial. Durante las décadas siguientes, la tipografía se utilizó en campañas publicitarias, logotipos y señalética, posicionándose como una herramienta versátil y adaptable a distintos contextos visuales. Su estructura limpia y sus proporciones armónicas permitieron que se mantuviera vigente a lo largo del tiempo, siendo reinterpretada por nuevas generaciones de diseñadores.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_10a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_10b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_10c.png")',
+		};//1927 Futura Ithaisa
+		const serie_11 = {
+			fondo: 'url("./img/fondos/fondo_11.jpg")',
+			logo: 'url("./img/logos/logo_11.png")',
+			sinopsis: 'En el transitado aeropuerto Frutiger, un técnico descubre una bomba oculta. La única persona que puede ayudarle... es quien la activó. Y tiene sus propias razones para hacerlo.',//
+			autor: 'Adrian Frutiger · 1928',
+			adjetivos: 'Humanista · Tensión · Emocionante',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FRUTIGER</span><br><br>Frutiger es una familia tipográfica. Su creador fue el diseñador Adrian Frutiger, suizo nacido en 1928, uno de los tipógrafos más prestigiosos del siglo XX.<br><br>La Frutiger nació a raíz de un encargo que recibió el diseñador en 1968. Se trataba de crear una tipografía para el sistema de señalización del nuevo aeropuerto de París-Charles de Gaulle, en Francia. La idea era crear una letra tipográfica moderna que combinara perfectamente con la arquitectura vanguardista del nuevo aeropuerto.<br><br>El punto central era que el carácter tipográfico se tenía que poder visualizar desde lejos: El viajero tenía que poder leer, mientras corría, la información de los rótulos de señalización del aeropuerto.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_11a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_11b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_11c.png")',
+		};//1928 Frutiger Carlos
+		const serie_12 = {
+			fondo: 'url("./img/fondos/fondo_12.jpg")',
+			logo: 'url("./img/logos/logo_12.png")',
+			sinopsis: 'Sinopsis 12',//
+			autor: 'Autor y año 12',
+			adjetivos: 'Adjetivos 12',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">PERPETUA</span><br><br>',//
+			anatomia_a: 'url("./img/anatomia/anatomia_12a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_12b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_12c.png")',
+		};//--------------------NO EXPONE: 1929 Perpetua Nayara
+		const serie_13 = {
+			fondo: 'url("./img/fondos/fondo_13.jpg")',
+			logo: 'url("./img/logos/logo_13.png")',
+			sinopsis: 'Sinopsis 13',//
+			autor: 'Autor y año 13',
+			adjetivos: 'Adjetivos 13',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">GILL SANS</span><br><br>',//
+			anatomia_a: 'url("./img/anatomia/anatomia_13a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_13b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_13c.png")',
+		};//--------------------NO EXPONE: 1930 Gill Sans Lucía
+		const serie_14 = {
+			fondo: 'url("./img/fondos/fondo_14.jpg")',
+			logo: 'url("./img/logos/logo_14.png")',
+			sinopsis: 'Sinopsis 14',//
+			autor: 'Autor y año 14',
+			adjetivos: 'Adjetivos 14',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BANK GOTHIC</span><br><br>',//
+			anatomia_a: 'url("./img/anatomia/anatomia_14.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_14.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_14.png")',
+		};//--------------------NO EXPONE: 1930 Bank Gothic Dafne
+		const serie_15 = {
+			fondo: 'url("./img/fondos/fondo_15.jpg")',
+			logo: 'url("./img/logos/logo_15.png")',
+			sinopsis: 'Roman, un periodista en el Londres revolucionario, se ve envuelto en una serie de brutales asesinatos. Su vida caótica y su ambición lo arrastran a los oscuros secretos que caminan en la noche.',//
+			autor: 'Stanley Morrison y Víctor Lardent · 1931',
+			adjetivos: 'Transicional · Drama · Sangrienta',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">TIMES NEW ROMAN</span><br><br>Times New Roman es una tipografía del tipo serif encargada por el periódico The Times (Londres) en 1931 y diseñada por Stanley Morison junto a Starling Burgess y Victor Lardent. El diseño de Times New Roman se basa en una antigua fuente sans-serif, Plantin Font y fue publicada por primera vez por Monotype Corporation en 1932. Aunque no es utilizada actualmente por The Times, se encuentra muy extendida para la impresión de libros.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_15a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_15b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_15c.png")',
+		};//1931 Times New Roman Marina
+		const serie_16 = {
+			fondo: 'url("./img/fondos/fondo_16.jpg")',
+			logo: 'url("./img/logos/logo_16.png")',
+			sinopsis: 'Sinopsis 16',//
+			autor: 'Autor y año 16',
+			adjetivos: 'Adjetivos 16',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">ROCKWELL</span><br><br>',//
+			anatomia_a: 'url("./img/anatomia/anatomia_16a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_16b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_16c.png")',
+		};//--------------------NO EXPONE: 1934 Rockwell Nayara
+		const serie_17 = {
+			fondo: 'url("./img/fondos/fondo_17.jpg")',
+			logo: 'url("./img/logos/logo_17.png")',
+			sinopsis: 'Sinopsis 17',//
+			autor: 'Autor y año 17',
+			adjetivos: 'Adjetivos 17',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">PALATINO</span><br><br>',//
+			anatomia_a: 'url("./img/anatomia/anatomia_17a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_17b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_17c.png")',
+		};//--------------------NO EXPONE: 1948 Palatino Alejandra
+		const serie_18 = {
+			fondo: 'url("./img/fondos/fondo_18.jpg")',
+			logo: 'url("./img/logos/logo_18.png")',
+			sinopsis: 'No todo es lo que parece, todos tenemos secretos. La alta sociedad del Siglo XV aparenta ser perfecta, sin embargo un escritor que se mueve entre las más altas esferas descubre algo que no debería.',//
+			autor: 'Hermann Zapf · 1952',
+			adjetivos: 'Humanista · Misterio · Afilada',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">OPTIMA</span><br><br>La tipografía Optima es una de las fuentes más distintivas del siglo XX, destacada por su elegancia y versatilidad. Fue diseñada por Hermann Zapf entre 1952 y 1955, y publicada por primera vez por la fundición D. Stempel AG en Alemania en 1958.<br><br>Aunque Optima parece una sans serif, sus formas tienen una influencia humanista y se basan en inscripciones romanas clásicas, lo que le da un aire de sofisticación y claridad. Presenta variaciones de grosor dentro de cada trazo, algo poco común en las sans serif tradicionales, lo que la hace visualmente rica y legible tanto en títulos como en textos corridos.<br><br>Zapf se inspiró en las letras talladas en una lápida en la iglesia de Santa Croce en Florencia, durante una visita a Italia. Le impresionó la forma en que las letras parecían sin serifas pero conservaban proporciones clásicas y detalles refinados.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_18a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_18b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_18c.png")',
+		};//1952 Optima Ithaisa
+		const serie_19 = {
+			fondo: 'url("./img/fondos/fondo_19.jpg")',
+			logo: 'url("./img/logos/logo_19.png")',
+			sinopsis: 'Émile, pintor sin firma, descubre la tipografía Mistral y empieza a usarla. Sus obras cobran vida. Conoce a Clara, calígrafa. Juntos firman en Mistral: él con pincel, ella con tinta.',//
+			autor: 'Roger Excoffon · 1953',
+			adjetivos: 'Caligráfica · Artística · Creativa',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MISTRAL</span><br><br>Mistral es una tipografía caligráfica diseñada en 1953 por el francés Roger Excoffon. Se inspira en su propia escritura a mano, con trazos fluidos, ligados y expresivos, como si el viento la hubiera dibujado.<br><br>El nombre viene del viento Mistral del sur de Francia, reflejando el movimiento y la energía de sus letras. Es ideal para títulos y diseños con carácter artístico o humano.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_19a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_19b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_19c.png")',
+		};//1953 Mistral Athenery
+		const serie_20 = {
+			fondo: 'url("./img/fondos/fondo_20.jpg")',
+			logo: 'url("./img/logos/logo_20.png")',
+			sinopsis: 'Courier, el escriba implacable. Nacido en la era de las máquinas, su voz uniforme reveló secretos, juicios y confesiones. En un mundo digital, tecleará su verdad siempre.',//
+			autor: 'Howard &quot;Bud&quot; Kettler · 1955',
+			adjetivos: 'Mecánica · Técnica · Funcional',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COURIER</span><br><br>Courier fue diseñada en 1955 por Howard Kettler para IBM, con el objetivo de crear una tipografía legible y uniforme para máquinas de escribir. Su diseño monoespaciado, donde cada carácter ocupa el mismo espacio, refleja una estética funcional y mecánica. Courier se convirtió en el estándar para la escritura técnica, guiones y documentos legales. Aunque fue creada en un contexto analógico, ha mantenido su relevancia en la era digital por su claridad, neutralidad y evocación del pasado tecnológico.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_20a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_20b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_20c.png")',
+		};//1955 Courier Josefina
+		const serie_21 = {
+			fondo: 'url("./img/fondos/fondo_21.jpg")',
+			logo: 'url("./img/logos/logo_21.png")',
+			sinopsis: 'Un mundo donde la paz, la tecnología y la naturaleza coexisten, está a punto de ser corrompido.',//
+			autor: 'Max Miedinger · 1957',
+			adjetivos: 'Neogrotesca · Sunpunk · Distópica',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">HELVETICA</span><br><br>La tipografía nace con la invención de la imprenta de tipos móviles por Gutenberg en el siglo XV, En el siglo XIX aparece la sans serif, más simple y sin adornos, y en el XX, el diseño tipográfico explota con el Estilo Suizo y la Bauhaus, buscando orden y funcionalidad. Tipos como Helvetica se vuelven símbolos de modernidad.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_21a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_21b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_21c.png")',
+		};//1957 Helvetica Alondra
+		const serie_22 = {
+			fondo: 'url("./img/fondos/fondo_22.jpg")',
+			logo: 'url("./img/logos/logo_22.png")',
+			sinopsis: 'Un experimento fallido financiado por un importante empresario abre un portal a múltiples realidades. Ahora, un joven deberá atravesar mundos paralelos hasta encontrar el suyo.',//
+			autor: 'Adrian Frutiger · 1957',
+			adjetivos: 'Neogrotesca · Thriller psicológico · Ficción',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">UNIVERS</span><br><br>Univers es una tipografía <em>sans serif</em> diseñada por Adrian Frutiger y lanzada en 1957 por la fundición Deberny & Peignot. Fue una de las primeras familias tipográficas planificadas como un sistema coherente con múltiples pesos y estilos, organizados de forma racional mediante un sistema numérico.<br><br>Su diseño limpio, funcional y de alta legibilidad la convirtió en una de las favoritas para el diseño gráfico moderno, especialmente en señalética, diseño corporativo y publicaciones técnicas. Univers refleja el espíritu del Estilo Tipográfico Internacional, también conocido como estilo suizo, y sigue siendo un referente del diseño tipográfico contemporáneo.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_22a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_22b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_22c.png")',
+		};//1957 Univers Vero
+		const serie_23 = {
+			fondo: 'url("./img/fondos/fondo_23.jpg")',
+			logo: 'url("./img/logos/logo_23.png")',
+			sinopsis: 'Año 2030, la creación de un juego con un mundo de realidad virtual global, en donde puedes interactuar con gente de todos lados, impacta en todo el planeta. Sin embargo, el futuro no tiene porque ser perfecto, y mucho menos en esta experiencia.',//
+			autor: 'Adrian Frutiger · 1988',
+			adjetivos: 'Geométrica · Futurista · Fantasiosa',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">AVENIR</span><br><br>Avenir fue creada por el legendario diseñador de fuentes suizo Adrian Frutiger (1928-2015), quien también creó Univers y la que lleva su apellido Frutiger. probó suerte en la escultura y en el diseño de fuentes desde muy joven y la influencia de las cursivas estrictas y formales que le enseñaron en sus días de estudiante lo impulsaron para crear alternativas más modernistas y revolucionarias.<br><br>Él trabajó solo en Avenir, sin la ayuda de asistentes legales y señaló que diseñó la fuente "pensando en la naturaleza humana". Avenir se lanzó en 1988 en tres grosores que posteriormente se expandió a una familia de seis grosores.<br><br>Frutiger a menudo se refería a Avenir como su obra maestra, describiéndola como "la tipografía más difícil en la que he trabajado". También se refería al proceso de crear fuentes sin serifa como "el principal trabajo de su vida", notando que las sin serifas eran más difíciles de diseñar que las fuentes con serifa debido a su marcada sencillez.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_23a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_23b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_23c.png")',
+		};//1988 Avenir Daniela
+		const serie_24 = {
+			fondo: 'url("./img/fondos/fondo_24.jpg")',
+			logo: 'url("./img/logos/logo_24.png")',
+			sinopsis: 'En plena guerra contra los dacios, el emperador Trajano lidera a Roma en una campaña épica de conquistas, enfrentando traiciones y batallas implacables para asegurar un legado eterno.',//
+			autor: 'Carol Twombly · 1989',
+			adjetivos: 'Old Style · Emocionante · Intensa',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">TRAJAN</span><br><br>La tipografía Trajan, diseñada en 1989 por Carol Twombly para Adobe, está inspirada en las inscripciones talladas en piedra de la Antigua Roma, especialmente en la Columna de Trajano, de donde toma su nombre. Es una tipografía serif, compuesta únicamente por letras mayúsculas, con un estilo elegante, solemne y clásico que evoca autoridad y tradición. Sus formas refinadas y proporciones equilibradas la han convertido en una favorita para carteles de películas, especialmente del género épico o histórico, así como en logos institucionales, portadas de libros y documentos ceremoniales. Trajan es una fuente de pago, disponible a través de Adobe y otras distribuidoras, y cuenta con variantes como Trajan Pro y Trajan Sans, que amplían su versatilidad manteniendo su esencia monumental.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_24a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_24b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_24c.png")',
+		};//1989 Trajan Esther
+		const serie_25 = {
+			fondo: 'url("./img/fondos/fondo_25.jpg")',
+			logo: 'url("./img/logos/logo_25.png")',
+			sinopsis: 'Un grupo de adolescentes de los 90 viaja accidentalmente al Renacimiento tardío, donde deberán encajar, sobrevivir y evitar alterar la Historia para poder regresar a casa.',//
+			autor: 'Robert Slimbach · 1990',
+			adjetivos: 'Humanista · Misterio · Aventura',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MINION</span><br><br>Inspirada en las tipografías antiguas del renacimiento tardío, esta tipografía diseñada por Robert Slimbach en 1990 para Adobe conserva la belleza, elegancia y legibilidad propia de los diseños de esa época. Fue creada originalmente como tipografía de texto pero se adapta perfectamente a la tecnología digital. Su amplia familia, formada de varios pesos y anchos, caracteres especiales y ornamentos la convierten en un tipo tremendamente flexible y funcional, muy útil para cualquier tipo de texto por su gran legibilidad, equilibrio y claridad.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_25a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_25b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_25c.png")',
+		};//1990 Minion Carla
+		const serie_26 = {
+			fondo: 'url("./img/fondos/fondo_26.jpg")',
+			logo: 'url("./img/logos/logo_26.png")',
+			sinopsis: 'Una IA ofrece a Ana todo lo que siempre quiso, pero pronto descubre que tiene un pequeño problema: ¿Puede escapar de su propia mente, o la IA ya la ha atrapado para siempre?',//
+			autor: 'Herb Lubalin · 1991',
+			adjetivos: 'Geométrica · Tecnología · Ambición',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CENTURY GOTHIC</span><br><br>La tipografía Century Gothic recibe su nombre de la tradición tipográfica que denomina &quot;góticas&quot; a las fuentes sin serifas, es decir, aquellas que carecen de remates en los trazos. Aunque el término &quot;gótico&quot; proviene originalmente del arte medieval, en tipografía se utiliza para describir estilos sans-serif, modernos y limpios. Esta se inspira en la familia tipográfica Century, de principios del siglo XX. A pesar de no estar relacionada con el estilo gótico tradicional, su nombre refleja esta convención tipográfica basada en la evolución del diseño de fuentes.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_26a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_26b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_26c.png")',
+		};//1991 Century Gothic Luis David
+		const serie_27 = {
+			fondo: 'url("./img/fondos/fondo_27.jpg")',
+			logo: 'url("./img/logos/logo_27.png")',
+			sinopsis: 'Sinopsis 27',//
+			autor: 'Autor y año 27',
+			adjetivos: 'Adjetivos 27',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COMIC SANS</span><br><br>',//
+			anatomia_a: 'url("./img/anatomia/anatomia_27a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_27b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_27c.png")',
+		};//--------------------NO EXPONE: 1994 Comic Sans Alejandra
+		const serie_29 = {
+			fondo: 'url("./img/fondos/fondo_29.jpg")',
+			logo: 'url("./img/logos/logo_29.png")',
+			sinopsis: 'Un mundo donde la paz, la tecnología y la naturaleza coexisten, está a punto de ser corrompido.',//
+			autor: 'Matthew Carter · 1996',
+			adjetivos: 'Sans-serif Humanista · iA · Distópica',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">VERDANA</span><br><br>Verdana fue diseñada en 1996 por Matthew Carter para Microsoft, con el objetivo de crear una tipografía altamente legible en pantalla, Verdana fue creada desde cero para el pixel: formas amplias, trazos simples, y mucho espacio entre letras.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_29a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_29b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_29c.png")',
+		};//1996 Verdana Alondra
+		const serie_30 = {
+			fondo: 'url("./img/fondos/fondo_30.jpg")',
+			logo: 'url("./img/logos/logo_30.png")',
+			sinopsis: 'Lucía descubre una sala secreta en un museo donde los objetos cobran vida, y queda atrapada en una conspiración que amenaza con cambiar el pasado y borrar el presente.',//
+			autor: 'Jos Buivenga · 2008',
+			adjetivos: 'Híbrida · Suspense · Misterio',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MUSEO</span><br><br>Jos Buivenga vive y trabaja en Arnhem. Empezó a diseñar tipografías en 1994 y fundó su exljbris Font Foundry diez años después. Es conocido principalmente por su familia tipográfica Museo y también por su forma de comercializar sus tipos.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_30a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_30b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_30c.png")',
+		};//2008 Museo Carla
+		const serie_31 = {
+			fondo: 'url("./img/fondos/fondo_31.jpg")',
+			logo: 'url("./img/logos/logo_31.png")',
+			sinopsis: 'Un detective enfrentado a un asesinato sin resolver descubre una red de secretos que oscurecen toda la ciudad. Misterio, tensión y verdad se entrelazan en cada paso.',//
+			autor: 'Hannes von Döhren · 2010',
+			adjetivos: 'Geométrica · Misterio · Thriller',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BRANDON GROTESQUE</span><br><br>La tipografía Brandon Grotesque fue diseñada en 2010 por Hannes von Döhren, de la fundición HVD Fonts. Se inspira en las tipografías geométricas de los años 20 y 30, con un estilo Art Déco. Combina formas limpias con detalles suaves y cálidos. Es muy usada en branding por su elegancia y legibilidad. También cuenta con versiones como Brandon Text para mejor lectura en tamaños pequeños.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_31a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_31b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_31c.png")',
+		};//2010 Brandon Grotesque Enya
+		const serie_32 = {
+			fondo: 'url("./img/fondos/fondo_32.jpg")',
+			logo: 'url("./img/logos/logo_32.png")',
+			sinopsis: 'Sinopsis 32',//
+			autor: 'Autor y año 32',
+			adjetivos: 'Adjetivos 32',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BEBAS NEUE</span><br><br>',//
+			anatomia_a: 'url("./img/anatomia/anatomia_32a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_32b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_32c.png")',
+		};//--------------------NO EXPONE: 2010 Bebas Neue Dafne
+		const serie_33 = {
+			fondo: 'url("./img/fondos/fondo_33.jpg")',
+			logo: 'url("./img/logos/logo_33.png")',
+			sinopsis: 'Carlos, un escalador en busca de redención, queda atrapado en Montserrat, enfrentándose a sus demonios internos. Elena, su amiga, lucha por salvarlo, mientras la montaña revela oscuros secretos.',//
+			autor: 'Julieta Ulanovsky · 2011',
+			adjetivos: 'Geométrica · Intriga · Sombría',
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MONTSERRAT</span><br><br>Montserrat es una tipografía sans-serif creada en 2011 por la diseñadora argentina Julieta Ulanovsky. Su diseño se inspira en los antiguos carteles y rótulos del barrio Montserrat de Buenos Aires, con la intención de rescatar ese estilo urbano clásico y adaptarlo a un formato moderno y funcional.<br><br>Con un estilo geométrico, limpio y contemporáneo, Montserrat se caracteriza por su alta legibilidad y su estética profesional. Es ideal para uso en diseño web, branding, títulos, publicidad y diseño editorial, tanto en pantallas como en impresos.<br><br>La familia tipográfica ha crecido considerablemente desde su lanzamiento e incluye múltiples pesos y estilos, desde Thin hasta Black, además de versiones itálicas. También existen variantes como Montserrat Alternates y Montserrat Subrayada, que ofrecen opciones más decorativas.',//
+			anatomia_a: 'url("./img/anatomia/anatomia_33a.png")',
+			anatomia_b: 'url("./img/anatomia/anatomia_33b.png")',
+			anatomia_c: 'url("./img/anatomia/anatomia_33c.png")',
+		};//2011 Montserrat Esther
+		
+	</script>
+	
+	<script></script>
+	<script>		
+		
+		/* ----- LO DEL SCROLL UP-DOWN ----- */
+	    const contenedor_nav = document.getElementById('contenedor_nav');
+	    const pop_up = document.getElementById('pop_up');
+
+	    let hoverActivo = false;
+	    let modoMovil = window.innerWidth <= 840;
+
+	    function expandir() {
+	      if (efectosActivos()) {
+	        contenedor_nav.style.height = '300px';
+	      }
+	    }
+
+	    function contraer() {
+	      if (efectosActivos()) {
+	        contenedor_nav.style.height = '110px';
+	      }
+	    }
+
+	    function establecerModoMovil() {
+	      modoMovil = window.innerWidth <= 840;
+	      actualizarEstado();
+	    }
+
+	    function pop_upVisible() {
+	      return window.getComputedStyle(pop_up).display === 'block';
+	    }
+
+	    function efectosActivos() {
+	      return !modoMovil && !pop_upVisible();
+	    }
+
+	    function actualizarEstado() {
+	      if (!efectosActivos()) {
+	        // Si no están activos, fijamos altura correcta
+	        contenedor_nav.style.height = modoMovil ? '280px' : '110px';
+	      }
+	    }
+
+	    // Eventos de cambio de tamaño
+	    window.addEventListener('resize', establecerModoMovil);
+
+	    // Eventos de rueda
+	    window.addEventListener('wheel', (e) => {
+	      if (!efectosActivos()) return;
+
+	      if (e.deltaY > 0) {
+	        if (!hoverActivo) {
+	          expandir();
+	        }
+	      } else if (e.deltaY < 0) {
+	        if (!hoverActivo) {
+	          contraer();
+	        }
+	      }
+	    });
+
+	    // Eventos de teclado
+	    window.addEventListener('keydown', (e) => {
+	      if (!efectosActivos()) return;
+
+	      if (e.key === 'ArrowDown') {
+	        if (!hoverActivo) {
+	          expandir();
+	        }
+	      } else if (e.key === 'ArrowUp') {
+	        if (!hoverActivo) {
+	          contraer();
+	        }
+	      }
+	    });
+
+	    // Eventos de hover
+	    contenedor_nav.addEventListener('mouseenter', () => {
+	      if (!efectosActivos()) return;
+
+	      hoverActivo = true;
+	      expandir();
+	    });
+
+	    contenedor_nav.addEventListener('mouseleave', () => {
+	      if (!efectosActivos()) return;
+
+	      hoverActivo = false;
+	      contraer();
+	    });
+
+	    // Comprobar tamaño inicial
+	    establecerModoMovil();
+
+	    // Si quieres: podrías añadir un observador para cambios de visibilidad del pop_up automáticamente:
+	    const observer = new MutationObserver(actualizarEstado);
+	    observer.observe(pop_up, { attributes: true, attributeFilter: ['style'] });
+	</script>
+	</body>
+</html>
