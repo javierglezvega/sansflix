@@ -143,13 +143,12 @@
 			</div>
 		</div>
 		<div id="cortinilla_negra_inicial">
-			<div id="logo_sansflix_en_la_cortinilla_inicial" style="top:50%"></div>
+			<div id="logo_sansflix_en_la_cortinilla_inicial"></div>
 		</div>
 	
 	<style>
 		/*
 		NOTAS:
-		- quitar el espacio al logo y hacer que el contenedor_general empiece más abajo
 		*/
 		
 		* {
@@ -211,7 +210,7 @@
 			position: absolute;
 			width: 192px;
 			height: 52px;
-			top: 40%;
+			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			background-image: url("./img/logo_sansflix.png");
@@ -500,6 +499,7 @@
 		
 		/*MOBILE*/
 		@media screen and (max-width: 840px) {
+			#logo_sansflix_en_la_cortinilla_inicial {top: 45%;}
 		    #degradado_izq {background-image: linear-gradient(to right, rgba(0,0,0,.8) , rgba(0,0,0,.3));}
 			#contenedor_general {left: 6vw; top: 67px; width: 88vw;}
 			#logo_sansflix {left: 6vw; top: 25px; width: 156px; height: 42px;}
@@ -512,6 +512,7 @@
 				line-height: 32px;
 				opacity: .5;
 			}
+			#interrogante:hover {opacity: .5;}
 			#logo_serie {height: 33vw;}
 			.miniatura_serie {margin-top: 10px;}
 			.miniatura_serie:hover {margin-top: 10px;}
@@ -530,6 +531,7 @@
 			#contenedor_anatomia {margin-bottom: 28px;}
 			.anatomia {min-width: 75px; height: 75px; margin-right: 15px;}
 		}
+		
 	</style>
 	<style></style>
 	<style>	
@@ -611,7 +613,7 @@
 			}, 2000);
 		}
 		function abrir_pop_up_sobre_el_proyecto() {
-			document.getElementById("interior_pop_up").innerHTML = '<span style="font-weight: 200; font-size: 26px;">¿Qué es <em>Sansflix</em>?</span><br><br><span style="font-weight: 700;"><em>Sansflix</em></span> es un proyecto creativo de divulgación de la historia de la tipografía realizado por el alumnado del <span style="font-weight: 700;">Ciclo Formativo de Grado Superior de Gráfica Publicitaria</span> de la <a href="https://www.escueladeartetenerife.com/" target="_blank"><span style="font-weight: 700;">Escuela de Arte y Superior de Diseño Fernando Estévez</span></a> durante el curso 2024/2025.<br><br>Esta acción creativa se ha llevado a cabo en el módulo de Tipografía del primer curso, y se ha dividido en tres fases:<br><br><span style="font-weight: 800; color: #e50913;">1 |</span> En primer lugar, cada estudiante ha elegido una <span style="font-weight: 700;">tipografía relevante</span> dentro de la historia del diseño tipográfico, y ha indagado en sus orígenes, morfología y connotaciones semánticas.<br><br><span style="font-weight: 800; color: #e50913;">2 |</span> Tras este primer estudio, cada estudiante ha redactado una <span style="font-weight: 700;">sinopsis creativa</span> de una hipotética serie cuya trama está inspirada por la historia de la tipografía elegida.<br><br><span style="font-weight: 800; color: #e50913;">3 |</span> Por último, cada estudiante ha diseñado un <span style="font-weight: 700;">logotipo</span> para dicha serie &mdash;cuyo título coincide con el nombre de la tipografía elegida en cada caso&mdash;, y ha seleccionado una imagen de fondo para su reforzar su mensaje.<br><br>Todas estas propuestas se han reunido bajo el nombre de <span style="font-weight: 700;"><em>Sansflix</em></span>, un sitio web para divulgar la historia de la tipografía inspirado en las plataformas de <em>streaming</em>.<br><br><span style="font-weight: 700;">Alumnado participante:</span><br>Alondra Álvarez de León Machado<br>Carla Barrera Afonso<br>Verónica Ciria Ayuso<br>Victoria Concepción Lozano<br>Marina Dorta Cacho<br>Jael Expósito Rodeiro<br>Rita Fanaru Rodríguez<br>Lucía García Díaz<br>Carlos González Calimano González<br>Athenery González Montañez<br>Dafne Hernández Chica<br>Enya Hernández Rodríguez<br>Ithaisa Luis Martín<br>Josefina Ñíguez De León<br>Luis David Polisano Herrera<br>Nayara Ramos Hernández<br>Esther Rodríguez Herrera<br>Daniela Rodríguez Pérez<br>Alejandra Rodríguez Zamora<br><br><span style="font-weight: 700;">Profesor:</span> Javier González Vega<div id="logo_easd"></div>';//
+			document.getElementById("interior_pop_up").innerHTML = '<span style="font-weight: 200; font-size: 26px;">¿Qué es <em>Sansflix</em>?</span><br><br><span style="font-weight: 700;"><em>Sansflix</em></span> es un proyecto creativo de divulgación de la historia de la tipografía realizado por el alumnado del <span style="font-weight: 700;">Ciclo Formativo de Grado Superior de Gráfica Publicitaria</span> de la <a href="https://www.escueladeartetenerife.com/" target="_blank"><span style="font-weight: 700;">Escuela de Arte y Superior de Diseño Fernando Estévez</span></a> durante el curso 2024/2025.<br><br>Esta acción creativa se ha llevado a cabo en el módulo de Tipografía del primer curso, y se ha dividido en tres fases:<br><br><span style="font-weight: 800; color: #e50913;">1 |</span> En primer lugar, cada estudiante ha elegido una <span style="font-weight: 700;">tipografía relevante</span> dentro de la historia del diseño tipográfico, y ha indagado en sus orígenes, morfología y connotaciones semánticas.<br><br><span style="font-weight: 800; color: #e50913;">2 |</span> Tras este primer estudio, cada estudiante ha redactado una <span style="font-weight: 700;">sinopsis creativa</span> de una hipotética serie cuya trama está inspirada por la historia de la tipografía elegida.<br><br><span style="font-weight: 800; color: #e50913;">3 |</span> Por último, cada estudiante ha diseñado un <span style="font-weight: 700;">logotipo</span> para dicha serie &mdash;cuyo título coincide con el nombre de la tipografía elegida en cada caso&mdash;, y ha seleccionado una imagen de fondo para reforzar su mensaje.<br><br>Todas estas propuestas se han reunido bajo el nombre de <span style="font-weight: 700;"><em>Sansflix</em></span>, un sitio web para divulgar la historia de la tipografía inspirado en las plataformas de <em>streaming</em>.<br><br><span style="font-weight: 700;">Alumnado participante:</span><br>Alondra Álvarez de León Machado<br>Carla Barrera Afonso<br>Verónica Ciria Ayuso<br>Victoria Concepción Lozano<br>Marina Dorta Cacho<br>Jael Expósito Rodeiro<br>Rita Fanaru Rodríguez<br>Lucía García Díaz<br>Carlos González Calimano González<br>Athenery González Montañez<br>Dafne Hernández Chica<br>Enya Hernández Rodríguez<br>Ithaisa Luis Martín<br>Josefina Ñíguez De León<br>Luis David Polisano Herrera<br>Nayara Ramos Hernández<br>Esther Rodríguez Herrera<br>Daniela Rodríguez Pérez<br>Alejandra Rodríguez Zamora<br><br><span style="font-weight: 700;">Profesor:</span> Javier González Vega<div id="logo_easd"></div>';//
 			document.getElementById("fondo_pop_up").style.display = "block";
 			document.getElementById("pop_up").style.display = "block";
 		}
@@ -665,6 +667,7 @@
 		}
 		function cancelar_cambio_automatico() {
 			cambio_automatico = 'no';
+			/*
 			setTimeout(function(){
 				if (cambio_automatico == 'no') {
 					cambio_automatico = 'si';
@@ -672,6 +675,7 @@
 				}
 				else if (cambio_automatico == 'si') {;};
 			}, 360000);
+			*/
 		}
 		
 		function cambiar_a_serie_01() {
