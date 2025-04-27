@@ -14,7 +14,6 @@
 		<div id="degradado_izq"></div>
 		<div id="degradado_sup"></div>
 		<div id="contenedor_general">
-			<div id="espacio_para_logo_sansflix"></div>
 			<div id="espacio_1"></div>
 			<div id="logo_serie"></div>
 			<div id="espacio_2"></div>
@@ -150,6 +149,7 @@
 	<style>
 		/*
 		NOTAS:
+		- quitar el espacio al logo y hacer que el contenedor_general empiece más abajo
 		*/
 		
 		* {
@@ -249,8 +249,9 @@
 		#contenedor_general {
 			position: fixed;
 			left: 70px;
-			top: 40px;
+			top: 92px;
 			width: 700px;
+			cursor: pointer;
 		}
 		#logo_sansflix {
 			position: fixed;
@@ -264,11 +265,6 @@
 			background-position: center;
 			background-size: contain;
 		}
-		#espacio_para_logo_sansflix {
-			position: relative;
-			width: 192px;
-			height: 52px;
-		}
 		#espacio_1 {
 			position: relative;
 			width: 100%;
@@ -278,7 +274,6 @@
 			position: relative;
 			width: 100%;
 			height: 263px;
-			cursor: pointer;
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
@@ -352,7 +347,7 @@
 			width: 100%;
 			height: 110px;
 			transition: .4s;
-			overflow: scroll;
+			overflow-x: scroll;
 		}
 		.miniatura_serie {
 			position: relative;
@@ -506,7 +501,7 @@
 		/*MOBILE*/
 		@media screen and (max-width: 840px) {
 		    #degradado_izq {background-image: linear-gradient(to right, rgba(0,0,0,.8) , rgba(0,0,0,.3));}
-			#contenedor_general {left: 6vw; top: 25px; width: 88vw;}
+			#contenedor_general {left: 6vw; top: 67px; width: 88vw;}
 			#logo_sansflix {left: 6vw; top: 25px; width: 156px; height: 42px;}
 			#interrogante {
 				top: 23px;
@@ -517,7 +512,6 @@
 				line-height: 32px;
 				opacity: .5;
 			}
-			#espacio_para_logo_sansflix {width: 156px; height: 42px;}
 			#logo_serie {height: 33vw;}
 			.miniatura_serie {margin-top: 10px;}
 			.miniatura_serie:hover {margin-top: 10px;}
@@ -623,11 +617,6 @@
 		}
 		document.getElementById("logo_sansflix").addEventListener("click", function() {abrir_pop_up_sobre_el_proyecto();});
 		document.getElementById("interrogante").addEventListener("click", function() {abrir_pop_up_sobre_el_proyecto();});
-		document.getElementById("logo_serie").addEventListener("click", function() {
-			document.getElementById("interior_pop_up").innerHTML = 'Historia de la tipografía 01';//
-			document.getElementById("fondo_pop_up").style.display = "block";
-			document.getElementById("pop_up").style.display = "block";
-		});
 		document.getElementById("x_cerrar_pop_up").addEventListener("click", function() {
 			document.getElementById("fondo_pop_up").style.display = "none";
 			document.getElementById("pop_up").style.display = "none";
@@ -677,13 +666,16 @@
 		function cancelar_cambio_automatico() {
 			cambio_automatico = 'no';
 			setTimeout(function(){
-				cambio_automatico = 'si';
-				serie_al_azar();
+				if (cambio_automatico == 'no') {
+					cambio_automatico = 'si';
+					serie_al_azar();
+				}
+				else if (cambio_automatico == 'si') {;};
 			}, 360000);
 		}
 		
 		function cambiar_a_serie_01() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_01.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_01.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_01.anatomia_b;
@@ -702,7 +694,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_02() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_02.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_02.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_02.anatomia_b;
@@ -721,7 +713,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_03() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_03.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_03.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_03.anatomia_b;
@@ -740,7 +732,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_04() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_04.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_04.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_04.anatomia_b;
@@ -759,7 +751,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_05() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_05.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_05.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_05.anatomia_b;
@@ -778,7 +770,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_06() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_06.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_06.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_06.anatomia_b;
@@ -797,7 +789,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_07() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_07.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_07.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_07.anatomia_b;
@@ -816,7 +808,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_08() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_08.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_08.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_08.anatomia_b;
@@ -835,7 +827,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_09() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_09.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_09.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_09.anatomia_b;
@@ -854,7 +846,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_10() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_10.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_10.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_10.anatomia_b;
@@ -873,7 +865,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_11() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_11.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_11.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_11.anatomia_b;
@@ -892,7 +884,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_12() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_12.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_12.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_12.anatomia_b;
@@ -911,7 +903,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_13() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_13.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_13.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_13.anatomia_b;
@@ -930,7 +922,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_14() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_14.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_14.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_14.anatomia_b;
@@ -949,7 +941,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_15() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_15.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_15.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_15.anatomia_b;
@@ -968,7 +960,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_16() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_16.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_16.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_16.anatomia_b;
@@ -987,7 +979,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_17() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_17.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_17.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_17.anatomia_b;
@@ -1006,7 +998,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_18() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_18.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_18.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_18.anatomia_b;
@@ -1025,7 +1017,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_19() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_19.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_19.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_19.anatomia_b;
@@ -1044,7 +1036,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_20() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_20.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_20.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_20.anatomia_b;
@@ -1063,7 +1055,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_21() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_21.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_21.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_21.anatomia_b;
@@ -1082,7 +1074,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_22() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_22.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_22.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_22.anatomia_b;
@@ -1101,7 +1093,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_23() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_23.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_23.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_23.anatomia_b;
@@ -1120,7 +1112,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_24() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_24.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_24.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_24.anatomia_b;
@@ -1139,7 +1131,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_25() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_25.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_25.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_25.anatomia_b;
@@ -1158,7 +1150,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_26() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_26.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_26.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_26.anatomia_b;
@@ -1177,7 +1169,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_27() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_27.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_27.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_27.anatomia_b;
@@ -1196,7 +1188,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_28() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_28.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_28.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_28.anatomia_b;
@@ -1215,7 +1207,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_29() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_29.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_29.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_29.anatomia_b;
@@ -1234,7 +1226,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_30() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_30.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_30.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_30.anatomia_b;
@@ -1253,7 +1245,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_31() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_31.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_31.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_31.anatomia_b;
@@ -1272,7 +1264,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_32() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_32.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_32.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_32.anatomia_b;
@@ -1291,7 +1283,7 @@
 			setTimeout(function(){document.getElementById("cortinilla_negra_para_cambio_de_serie").style.display = "none";}, 1000);
 		}
 		function cambiar_a_serie_33() {
-			document.getElementById("logo_serie").addEventListener("click", function() {
+			document.getElementById("contenedor_general").addEventListener("click", function() {
 				document.getElementById("interior_pop_up").innerHTML = serie_33.historia;//
 				document.getElementById("anatomia_a").style.backgroundImage = serie_33.anatomia_a;
 				document.getElementById("anatomia_b").style.backgroundImage = serie_33.anatomia_b;
@@ -1316,373 +1308,373 @@
 			sinopsis: 'Jenson es un detective privado atrapado entre el bien y el mal. Cuando recibe un caso personal, se enfrenta a un misterio que pone en peligro su vida y su moral.',//
 			autor: 'Nicholas Jenson · 1470',
 			adjetivos: 'Old-style',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">JENSON</span><br><br>La tipografía Jenson fue creada en 1470 por Nicolas Jenson, un grabador y tipógrafo francés que trabajaba en Venecia. Su diseño se inspiró en las letras romanas clásicas y en la escritura humanista de la época. Esta tipografía fue una de las primeras romanas utilizadas para imprimir libros, en reemplazo de las góticas más difíciles de leer.<br><br>El diseño de Jenson marcó un punto de inflexión en la historia de la tipografía, estableciendo las bases del estilo <em>old style</em> (antiguo) con serifas elegantes, ejes inclinados y gran legibilidad. Su influencia fue tan fuerte que muchos tipos posteriores se basaron en ella.<br><br>En el siglo XX, Robert Slimbach diseñó Adobe Jenson (1996), una versión digital moderna fiel al estilo original pero optimizada para impresión y pantallas.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">JENSON</span><br><br>La tipografía Jenson fue creada en 1470 por Nicolas Jenson, un grabador y tipógrafo francés que trabajaba en Venecia. Su diseño se inspiró en las letras romanas clásicas y en la escritura humanista de la época. Esta tipografía fue una de las primeras romanas utilizadas para imprimir libros, en reemplazo de las góticas más difíciles de leer.<br><br>El diseño de Jenson marcó un punto de inflexión en la historia de la tipografía, estableciendo las bases del estilo <em>old style</em> (antiguo) con serifas elegantes, ejes inclinados y gran legibilidad. Su influencia fue tan fuerte que muchos tipos posteriores se basaron en ella.<br><br>En el siglo XX, Robert Slimbach diseñó Adobe Jenson (1996), una versión digital moderna fiel al estilo original pero optimizada para impresión y pantallas.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Jael Expósito Rodeiro',//
 			anatomia_a: 'url("./img/anatomia/anatomia_28a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_28b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_28c.png")',
-		};//1470 Jenson Jael
+		};//1470 Jenson Jael Expósito Rodeiro
 		const serie_01 = {
 			fondo: 'url("./img/fondos/fondo_01.jpg")',
 			logo: 'url("./img/logos/logo_01.png")',
 			sinopsis: 'París, 1530. Entre intrigas cortesanas y conflictos religiosos, una joven desafía el poder con su intelecto, luchando por difundir el conocimiento en una Europa que arde en transformación.',//
 			autor: 'Claude Garamond · 1530',
 			adjetivos: 'Garalda · Clásica · Sofisticada',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">GARAMOND</span><br><br>Garamond es una de las tipografías más antiguas aún en uso, creada por el impresor y tipógrafo francés Claude Garamond hacia 1530. Inspirada en la caligrafía humanista del Renacimiento, destaca por su elegancia, proporciones armoniosas y excelente legibilidad. A lo largo de los siglos, ha sido adaptada en múltiples versiones, consolidándose como un estándar en el diseño editorial y académico.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">GARAMOND</span><br><br>Garamond es una de las tipografías más antiguas aún en uso, creada por el impresor y tipógrafo francés Claude Garamond hacia 1530. Inspirada en la caligrafía humanista del Renacimiento, destaca por su elegancia, proporciones armoniosas y excelente legibilidad. A lo largo de los siglos, ha sido adaptada en múltiples versiones, consolidándose como un estándar en el diseño editorial y académico.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Rita Fanaru Rodríguez',//
 			anatomia_a: 'url("./img/anatomia/anatomia_01a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_01b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_01c.png")',
-		};//1530 Garamond Rita
+		};//1530 Garamond Rita Fanaru Rodríguez
 		const serie_02 = {
 			fondo: 'url("./img/fondos/fondo_02.jpg")',
 			logo: 'url("./img/logos/logo_02.png")',
 			sinopsis: 'Bajo la lluvia perpetua, un detective sin nombre recorre callejones donde la verdad se esconde tras cada sombra. En esta ciudad, nadie es inocente... solo más difícil de atrapar.',//
 			autor: 'William Caslon · 1722',
 			adjetivos: 'Serifa Antigua · clásica · elegante',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CASLON</span><br><br>La tipografía Caslon reconocida por su elegancia, legibilidad y carácter clásico, fue muy usada en el siglo XVIII y aparece en documentos históricos importantes, como la Declaración de Independencia de EE. UU. Su estilo transmite tradición y autoridad, lo que la hace ideal para textos impresos formales y editoriales.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CASLON</span><br><br>La tipografía Caslon reconocida por su elegancia, legibilidad y carácter clásico, fue muy usada en el siglo XVIII y aparece en documentos históricos importantes, como la Declaración de Independencia de EE. UU. Su estilo transmite tradición y autoridad, lo que la hace ideal para textos impresos formales y editoriales.<br><br><span style="font-weight: 700;">Autor de la propuesta:</span> Luis David Polisano Herrera',//
 			anatomia_a: 'url("./img/anatomia/anatomia_02a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_02b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_02c.png")',
-		};//1722 Caslon Luis David
+		};//1722 Caslon Luis David Polisano Herrera
 		const serie_03 = {
 			fondo: 'url("./img/fondos/fondo_03.jpg")',
 			logo: 'url("./img/logos/logo_03.png")',
 			sinopsis: 'Birmingham, 1757. La familia Baskerville controla todos los negocios del país. Entre traiciones, caídas y pactos rotos, esta familia mafiosa escribirá su historia con sangre... y billetes.',//
 			autor: 'John Baskerville · 1757',
 			adjetivos: 'Transicional · Violencia · Sombría',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BASKERVILLE</span><br><br>La tipografía Baskerville fue creada en 1757 por el impresor y tipógrafo inglés John Baskerville, un perfeccionista apasionado por el diseño, la impresión y la elegancia en la tipografía. Surgió en un período de transición entre las tipografías antiguas, como Garamond, y las modernas, como Bodoni, por lo que se clasifica como una tipografía de transición.<br><br>En su época, su trabajo fue duramente criticado. Muchos consideraban que su tipo era demasiado brillante y fino para la tecnología de impresión de entonces.<br><br>A pesar de las críticas, su trabajo fue admirado por figuras importantes, como Benjamin Franklin, quien ayudó a difundir su uso en América. Con el tiempo, Baskerville se convirtió en una tipografía influyente, que inspiró a diseñadores posteriores.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BASKERVILLE</span><br><br>La tipografía Baskerville fue creada en 1757 por el impresor y tipógrafo inglés John Baskerville, un perfeccionista apasionado por el diseño, la impresión y la elegancia en la tipografía. Surgió en un período de transición entre las tipografías antiguas, como Garamond, y las modernas, como Bodoni, por lo que se clasifica como una tipografía de transición.<br><br>En su época, su trabajo fue duramente criticado. Muchos consideraban que su tipo era demasiado brillante y fino para la tecnología de impresión de entonces.<br><br>A pesar de las críticas, su trabajo fue admirado por figuras importantes, como Benjamin Franklin, quien ayudó a difundir su uso en América. Con el tiempo, Baskerville se convirtió en una tipografía influyente, que inspiró a diseñadores posteriores.<br><br><span style="font-weight: 700;">Autor de la propuesta:</span> Carlos González Calimano González',//
 			anatomia_a: 'url("./img/anatomia/anatomia_03a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_03b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_03c.png")',
-		};//1757 Baskerville Carlos
+		};//1757 Baskerville Carlos González Calimano González
 		const serie_04 = {
 			fondo: 'url("./img/fondos/fondo_04.jpg")',
 			logo: 'url("./img/logos/logo_04.png")',
 			sinopsis: 'Cuando la obsesión por la perfección tipográfica toma el control, la línea entre el arte y la locura comienza a desvanecerse.',//
 			autor: 'Firmin Didot · 1784',
 			adjetivos: 'Neoclásica · Thriller psicológico · Arte',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">DIDOT</span><br><br>Didot es una familia de fuentes tipográficas desarrollada entre 1784 y 1811 por Firmin Didot en París y usada por su hermano Pierre Didot en la imprenta. Inspirada en el trabajo de John Baskerville, la tipografía Didot se caracteriza por su alto contraste entre trazos gruesos y finos, lo que la define como neoclásica y se categoriza como <em>Romanas Modernas</em> o <em>Didonas</em>.<br><br>Con el tiempo, su diseño ha sido adaptado para la era digital, con reediciones destacadas como las de Adrian Frutiger y Jonathan Hoefler. Su estética elegante sigue influyendo en la tipografía moderna y ha sido ampliamente utilizada en la moda y la edición de lujo, destacando en marcas como Vogue. Hoy, sigue siendo símbolo de elegancia y precisión tipográfica.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">DIDOT</span><br><br>Didot es una familia de fuentes tipográficas desarrollada entre 1784 y 1811 por Firmin Didot en París y usada por su hermano Pierre Didot en la imprenta. Inspirada en el trabajo de John Baskerville, la tipografía Didot se caracteriza por su alto contraste entre trazos gruesos y finos, lo que la define como neoclásica y se categoriza como <em>Romanas Modernas</em> o <em>Didonas</em>.<br><br>Con el tiempo, su diseño ha sido adaptado para la era digital, con reediciones destacadas como las de Adrian Frutiger y Jonathan Hoefler. Su estética elegante sigue influyendo en la tipografía moderna y ha sido ampliamente utilizada en la moda y la edición de lujo, destacando en marcas como Vogue. Hoy, sigue siendo símbolo de elegancia y precisión tipográfica.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Verónica Ciria Ayuso',//
 			anatomia_a: 'url("./img/anatomia/anatomia_04a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_04b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_04c.png")',
-		};//1784 Didot Vero
+		};//1784 Didot Verónica Ciria Ayuso
 		const serie_05 = {
 			fondo: 'url("./img/fondos/fondo_05.jpg")',
 			logo: 'url("./img/logos/logo_05.png")',
 			sinopsis: 'En una sociedad donde lo idílico y la perfección reinan sobre todo, surge una revolución que lo cambia todo para dar paso a un nuevo mundo.',//
 			autor: 'Giambattista Bodoni · 1787',
 			adjetivos: 'Didona · Acción · Elegante',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BODONI</span><br><br>La tipografía Bodoni fue creada a finales del siglo XVIII por el diseñador tipográfico italiano Giambattista Bodoni. Bodoni buscaba crear una tipografía que reflejara los ideales del Neoclasicismo, caracterizado por su enfoque en la simetría, la claridad y la elegancia.<br><br>Bodoni se inspiró en las formas geométricas y las proporciones clásicas de la antigua Roma, combinándolas con elementos modernos y un estilo distintivo. Su diseño se caracteriza por líneas finas, contraste pronunciado entre los trazos gruesos y delgados, y serifas afiladas y uniformes.<br><br>A lo largo del siglo XIX, la tipografía Bodoni ganó una amplia popularidad en toda Europa, convirtiéndose en una de las tipografías más utilizadas en la impresión de libros, revistas y carteles.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BODONI</span><br><br>La tipografía Bodoni fue creada a finales del siglo XVIII por el diseñador tipográfico italiano Giambattista Bodoni. Bodoni buscaba crear una tipografía que reflejara los ideales del Neoclasicismo, caracterizado por su enfoque en la simetría, la claridad y la elegancia.<br><br>Bodoni se inspiró en las formas geométricas y las proporciones clásicas de la antigua Roma, combinándolas con elementos modernos y un estilo distintivo. Su diseño se caracteriza por líneas finas, contraste pronunciado entre los trazos gruesos y delgados, y serifas afiladas y uniformes.<br><br>A lo largo del siglo XIX, la tipografía Bodoni ganó una amplia popularidad en toda Europa, convirtiéndose en una de las tipografías más utilizadas en la impresión de libros, revistas y carteles.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Daniela Rodríguez Pérez',//
 			anatomia_a: 'url("./img/anatomia/anatomia_05a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_05b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_05c.png")',
-		};//1787 Bodoni Daniela
+		};//1787 Bodoni Daniela Rodríguez Pérez
 		const serie_06 = {
 			fondo: 'url("./img/fondos/fondo_06.jpg")',
 			logo: 'url("./img/logos/logo_06.png")',
 			sinopsis: 'En 1882, la próspera ciudad de Clarendon es el último refugio antes del desierto sin ley. La llegada de un forastero con un pasado oscuro desata una guerra entre terratenientes, bandidos y soldados corruptos. Entre duelos y traiciones, el pueblo se convierte en un campo de batalla por el control de la región. En Clarendon, la justicia es solo otra bala en la recámara.',//
 			autor: 'Robert Besley · 1845',
 			adjetivos: 'Humanista · Robusta · Impactante',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CLARENDON</span><br><br>Clarendon fue creada en 1845 por Robert Besley en la Fann Street Foundry de Londres, y grabada por Benjamin Fox. Fue la primera tipografía en ser registrada legalmente como diseño tipográfico, lo que marcó un hito en la protección de la propiedad intelectual en el diseño de letras.<br><br>Originalmente, Clarendon fue concebida como una tipografía de énfasis, pensada para ser utilizada junto a otras tipografías romanas en los cuerpos de texto, como una especie de "negrita elegante". Su estilo slab serif con serifas gruesas y rectangulares le daba una fuerte presencia visual sin perder legibilidad.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CLARENDON</span><br><br>Clarendon fue creada en 1845 por Robert Besley en la Fann Street Foundry de Londres, y grabada por Benjamin Fox. Fue la primera tipografía en ser registrada legalmente como diseño tipográfico, lo que marcó un hito en la protección de la propiedad intelectual en el diseño de letras.<br><br>Originalmente, Clarendon fue concebida como una tipografía de énfasis, pensada para ser utilizada junto a otras tipografías romanas en los cuerpos de texto, como una especie de "negrita elegante". Su estilo slab serif con serifas gruesas y rectangulares le daba una fuerte presencia visual sin perder legibilidad.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Jael Expósito Rodeiro',//
 			anatomia_a: 'url("./img/anatomia/anatomia_06a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_06b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_06c.png")',
-		};//1845 Clarendon Jael
+		};//1845 Clarendon Jael Expósito Rodeiro
 		const serie_07 = {
 			fondo: 'url("./img/fondos/fondo_07.jpg")',
 			logo: 'url("./img/logos/logo_07.png")',
 			sinopsis: 'Un grupo de amigos se cuela en una fundición tipográfica en ruinas. Pronto descubrirán que no están solos. ¿Quién los acecha? ¿Qué ocurrió en ese lugar?',//
 			autor: 'H. Berthold · 1896',
 			adjetivos: 'Grotesca · Angustia · Inquietante',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">AKZIDENZ GROTESK</span><br><br>La Akzidenz Grotesk, también conocida como Berthold Akzidenz Grotesk u Odd-job Sansserif, es un tipo de letra paloseco o sans serif diseñado por la fundidora de tipos H. Berthold de la ciudad de Berlín en el año de 1896; esta fundición sirvió de inspiración para que Max Miedinger creara en 1957 el tipo de letra Helvética, una de las más importantes muestras del grafismo racionalista de la Escuela Suiza de mediados del siglo XX.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">AKZIDENZ GROTESK</span><br><br>La Akzidenz Grotesk, también conocida como Berthold Akzidenz Grotesk u Odd-job Sansserif, es un tipo de letra paloseco o sans serif diseñado por la fundidora de tipos H. Berthold de la ciudad de Berlín en el año de 1896; esta fundición sirvió de inspiración para que Max Miedinger creara en 1957 el tipo de letra Helvética, una de las más importantes muestras del grafismo racionalista de la Escuela Suiza de mediados del siglo XX.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Marina Dorta Cacho',//
 			anatomia_a: 'url("./img/anatomia/anatomia_07a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_07b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_07c.png")',
-		};//1896 Akzidenz Grotesk Marina
+		};//1896 Akzidenz Grotesk Marina Dorta Cacho
 		const serie_08 = {
 			fondo: 'url("./img/fondos/fondo_08.jpg")',
 			logo: 'url("./img/logos/logo_08.png")',
 			sinopsis: 'Entre lápidas y silencio, una restauradora descubre un lenguaje oculto en la piedra. Letras finas revelan secretos antiguos: confesiones de un asesino que convirtió la tipografía en su firma eterna.',//
 			autor: 'Frederic W. Goudy · 1901',
 			adjetivos: 'Incisa · Suspense psicológico · Misterio',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COPPERPLATE GOTHIC</span><br><br>Copperplate Gothic fue diseñada en 1901 por Frederic W. Goudy para la fundición tipográfica American Type Founders. A pesar de su nombre, no pertenece a la familia de las letras góticas tradicionales. Su diseño combina mayúsculas con pequeñas serifas, inspirado en el estilo de grabado en placas de cobre. Se creó para usarse en impresiones formales y elegantes, como tarjetas de presentación, membretes, placas profesionales y documentos legales. La ausencia de minúsculas le da un carácter sobrio y distintivo. Su apariencia mezcla tradición y modernidad, y ha perdurado como una tipografía reconocible por su fuerza, claridad y autoridad visual.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COPPERPLATE GOTHIC</span><br><br>Copperplate Gothic fue diseñada en 1901 por Frederic W. Goudy para la fundición tipográfica American Type Founders. A pesar de su nombre, no pertenece a la familia de las letras góticas tradicionales. Su diseño combina mayúsculas con pequeñas serifas, inspirado en el estilo de grabado en placas de cobre. Se creó para usarse en impresiones formales y elegantes, como tarjetas de presentación, membretes, placas profesionales y documentos legales. La ausencia de minúsculas le da un carácter sobrio y distintivo. Su apariencia mezcla tradición y modernidad, y ha perdurado como una tipografía reconocible por su fuerza, claridad y autoridad visual.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Victoria Concepción Lozano',//
 			anatomia_a: 'url("./img/anatomia/anatomia_08a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_08b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_08c.png")',
-		};//1901 Copperplate Gothic Victoria
+		};//1901 Copperplate Gothic Victoria Concepción Lozano
 		const serie_09 = {
 			fondo: 'url("./img/fondos/fondo_09.jpg")',
 			logo: 'url("./img/logos/logo_09.png")',
 			sinopsis: 'En una ciudad vigilada por el poder, un agente secreto pone en juego su identidad y su vida. La misión es clara: desmantelar el sistema desde dentro, cueste lo que cueste.',//
 			autor: 'Morris Fuller Benton · 1902',
 			adjetivos: 'Neogrotesca · Espionaje · Drama político',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FRANKLIN GOTHIC</span><br><br>La Franklin Gothic es una tipografía sans serif creada en 1902 por Morris Fuller Benton para la American Type Founders (ATF). Diseñada para ser fuerte, clara y legible, se convirtió rápidamente en una fuente popular para titulares en periódicos, publicidad y anuncios oficiales. Su estilo robusto y serio le dio un aire de autoridad que la mantuvo vigente durante décadas. A lo largo del tiempo, ha sido rediseñada y adaptada digitalmente, manteniendo su esencia original. Franklin Gothic es considerada un ícono del diseño tipográfico estadounidense y sigue usándose ampliamente por su versatilidad, fuerza visual y tono institucional sin perder modernidad.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FRANKLIN GOTHIC</span><br><br>La Franklin Gothic es una tipografía sans serif creada en 1902 por Morris Fuller Benton para la American Type Founders (ATF). Diseñada para ser fuerte, clara y legible, se convirtió rápidamente en una fuente popular para titulares en periódicos, publicidad y anuncios oficiales. Su estilo robusto y serio le dio un aire de autoridad que la mantuvo vigente durante décadas. A lo largo del tiempo, ha sido rediseñada y adaptada digitalmente, manteniendo su esencia original. Franklin Gothic es considerada un ícono del diseño tipográfico estadounidense y sigue usándose ampliamente por su versatilidad, fuerza visual y tono institucional sin perder modernidad.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Victoria Concepción Lozano',//
 			anatomia_a: 'url("./img/anatomia/anatomia_09a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_09b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_09c.png")',
-		};//1902 Franklin Gothic Victoria
+		};//1902 Franklin Gothic Victoria Concepción Lozano
 		const serie_10 = {
 			fondo: 'url("./img/fondos/fondo_10.jpg")',
 			logo: 'url("./img/logos/logo_10.png")',
 			sinopsis: 'Existe una última oportunidad. En una sociedad donde los avances tecnológicos han acabado con el mundo tal y como se conocía, se descubre lo que podría cambiar el destino de la humanidad: los viajes en el tiempo.',//
 			autor: 'Paul Renner · 1927',
 			adjetivos: 'Geométrica · Suspense · Moderna',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FUTURA</span><br><br>Futura es una tipografía geométrica sans-serif creada en 1927 por el diseñador alemán Paul Renner, quien se inspiró en las corrientes artísticas y de diseño de su época, especialmente en las ideas de la Bauhaus y el modernismo. Renner buscaba romper con las formas tradicionales de la tipografía, impulsando una estética más racional y funcional basada en formas geométricas puras como círculos, triángulos y rectángulos. Esta apuesta por la simplicidad y la claridad visual fue revolucionaria, marcando un antes y un después en el mundo del diseño gráfico.<br><br>El diseño de Futura se consolidó rápidamente como un símbolo de modernidad y progreso, siendo adoptado en múltiples campos, desde la publicidad y el diseño editorial hasta la arquitectura y el diseño industrial. Durante las décadas siguientes, la tipografía se utilizó en campañas publicitarias, logotipos y señalética, posicionándose como una herramienta versátil y adaptable a distintos contextos visuales. Su estructura limpia y sus proporciones armónicas permitieron que se mantuviera vigente a lo largo del tiempo, siendo reinterpretada por nuevas generaciones de diseñadores.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FUTURA</span><br><br>Futura es una tipografía geométrica sans-serif creada en 1927 por el diseñador alemán Paul Renner, quien se inspiró en las corrientes artísticas y de diseño de su época, especialmente en las ideas de la Bauhaus y el modernismo. Renner buscaba romper con las formas tradicionales de la tipografía, impulsando una estética más racional y funcional basada en formas geométricas puras como círculos, triángulos y rectángulos. Esta apuesta por la simplicidad y la claridad visual fue revolucionaria, marcando un antes y un después en el mundo del diseño gráfico.<br><br>El diseño de Futura se consolidó rápidamente como un símbolo de modernidad y progreso, siendo adoptado en múltiples campos, desde la publicidad y el diseño editorial hasta la arquitectura y el diseño industrial. Durante las décadas siguientes, la tipografía se utilizó en campañas publicitarias, logotipos y señalética, posicionándose como una herramienta versátil y adaptable a distintos contextos visuales. Su estructura limpia y sus proporciones armónicas permitieron que se mantuviera vigente a lo largo del tiempo, siendo reinterpretada por nuevas generaciones de diseñadores.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Ithaisa Luis Martín',//
 			anatomia_a: 'url("./img/anatomia/anatomia_10a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_10b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_10c.png")',
-		};//1927 Futura Ithaisa
+		};//1927 Futura Ithaisa Luis Martín
 		const serie_11 = {
 			fondo: 'url("./img/fondos/fondo_11.jpg")',
 			logo: 'url("./img/logos/logo_11.png")',
 			sinopsis: 'En el transitado aeropuerto Frutiger, un técnico descubre una bomba oculta. La única persona que puede ayudarle... es quien la activó. Y tiene sus propias razones para hacerlo.',//
 			autor: 'Adrian Frutiger · 1928',
 			adjetivos: 'Humanista · Tensión · Emocionante',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FRUTIGER</span><br><br>Frutiger es una familia tipográfica. Su creador fue el diseñador Adrian Frutiger, suizo nacido en 1928, uno de los tipógrafos más prestigiosos del siglo XX.<br><br>La Frutiger nació a raíz de un encargo que recibió el diseñador en 1968. Se trataba de crear una tipografía para el sistema de señalización del nuevo aeropuerto de París-Charles de Gaulle, en Francia. La idea era crear una letra tipográfica moderna que combinara perfectamente con la arquitectura vanguardista del nuevo aeropuerto.<br><br>El punto central era que el carácter tipográfico se tenía que poder visualizar desde lejos: El viajero tenía que poder leer, mientras corría, la información de los rótulos de señalización del aeropuerto.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">FRUTIGER</span><br><br>Frutiger es una familia tipográfica. Su creador fue el diseñador Adrian Frutiger, suizo nacido en 1928, uno de los tipógrafos más prestigiosos del siglo XX.<br><br>La Frutiger nació a raíz de un encargo que recibió el diseñador en 1968. Se trataba de crear una tipografía para el sistema de señalización del nuevo aeropuerto de París-Charles de Gaulle, en Francia. La idea era crear una letra tipográfica moderna que combinara perfectamente con la arquitectura vanguardista del nuevo aeropuerto.<br><br>El punto central era que el carácter tipográfico se tenía que poder visualizar desde lejos: El viajero tenía que poder leer, mientras corría, la información de los rótulos de señalización del aeropuerto.<br><br><span style="font-weight: 700;">Autor de la propuesta:</span> Carlos González Calimano González',//
 			anatomia_a: 'url("./img/anatomia/anatomia_11a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_11b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_11c.png")',
-		};//1928 Frutiger Carlos
+		};//1928 Frutiger Carlos González Calimano González
 		const serie_12 = {
 			fondo: 'url("./img/fondos/fondo_12.jpg")',
 			logo: 'url("./img/logos/logo_12.png")',
 			sinopsis: 'Sinopsis 12',//
 			autor: 'Autor y año 12',
 			adjetivos: 'Adjetivos 12',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">PERPETUA</span><br><br>',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">PERPETUA</span><br><br>Historia<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Nayara Ramos Hernández',//
 			anatomia_a: 'url("./img/anatomia/anatomia_12a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_12b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_12c.png")',
-		};//--------------------NO EXPONE: 1929 Perpetua Nayara
+		};//--------------------NO EXPONE: 1929 Perpetua Nayara Ramos Hernández
 		const serie_13 = {
 			fondo: 'url("./img/fondos/fondo_13.jpg")',
 			logo: 'url("./img/logos/logo_13.png")',
 			sinopsis: 'Sinopsis 13',//
 			autor: 'Autor y año 13',
 			adjetivos: 'Adjetivos 13',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">GILL SANS</span><br><br>',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">GILL SANS</span><br><br>Historia<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Lucía García Díaz',//
 			anatomia_a: 'url("./img/anatomia/anatomia_13a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_13b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_13c.png")',
-		};//--------------------NO EXPONE: 1930 Gill Sans Lucía
+		};//--------------------NO EXPONE: 1930 Gill Sans Lucía García Díaz
 		const serie_14 = {
 			fondo: 'url("./img/fondos/fondo_14.jpg")',
 			logo: 'url("./img/logos/logo_14.png")',
 			sinopsis: 'Sinopsis 14',//
 			autor: 'Autor y año 14',
 			adjetivos: 'Adjetivos 14',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BANK GOTHIC</span><br><br>',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BANK GOTHIC</span><br><br>Historia<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Dafne Hernández Chica',//
 			anatomia_a: 'url("./img/anatomia/anatomia_14.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_14.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_14.png")',
-		};//--------------------NO EXPONE: 1930 Bank Gothic Dafne
+		};//--------------------NO EXPONE: 1930 Bank Gothic Dafne Hernández Chica
 		const serie_15 = {
 			fondo: 'url("./img/fondos/fondo_15.jpg")',
 			logo: 'url("./img/logos/logo_15.png")',
 			sinopsis: 'Roman, un periodista en el Londres revolucionario, se ve envuelto en una serie de brutales asesinatos. Su vida caótica y su ambición lo arrastran a los oscuros secretos que caminan en la noche.',//
 			autor: 'Stanley Morrison y Víctor Lardent · 1931',
 			adjetivos: 'Transicional · Drama · Sangrienta',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">TIMES NEW ROMAN</span><br><br>Times New Roman es una tipografía del tipo serif encargada por el periódico The Times (Londres) en 1931 y diseñada por Stanley Morison junto a Starling Burgess y Victor Lardent. El diseño de Times New Roman se basa en una antigua fuente sans-serif, Plantin Font y fue publicada por primera vez por Monotype Corporation en 1932. Aunque no es utilizada actualmente por The Times, se encuentra muy extendida para la impresión de libros.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">TIMES NEW ROMAN</span><br><br>Times New Roman es una tipografía del tipo serif encargada por el periódico The Times (Londres) en 1931 y diseñada por Stanley Morison junto a Starling Burgess y Victor Lardent. El diseño de Times New Roman se basa en una antigua fuente sans-serif, Plantin Font y fue publicada por primera vez por Monotype Corporation en 1932. Aunque no es utilizada actualmente por The Times, se encuentra muy extendida para la impresión de libros.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Marina Dorta Cacho',//
 			anatomia_a: 'url("./img/anatomia/anatomia_15a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_15b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_15c.png")',
-		};//1931 Times New Roman Marina
+		};//1931 Times New Roman Marina Dorta Cacho
 		const serie_16 = {
 			fondo: 'url("./img/fondos/fondo_16.jpg")',
 			logo: 'url("./img/logos/logo_16.png")',
 			sinopsis: 'Sinopsis 16',//
 			autor: 'Autor y año 16',
 			adjetivos: 'Adjetivos 16',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">ROCKWELL</span><br><br>',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">ROCKWELL</span><br><br>Historia<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Nayara Ramos Hernández',//
 			anatomia_a: 'url("./img/anatomia/anatomia_16a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_16b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_16c.png")',
-		};//--------------------NO EXPONE: 1934 Rockwell Nayara
+		};//--------------------NO EXPONE: 1934 Rockwell Nayara Ramos Hernández
 		const serie_17 = {
 			fondo: 'url("./img/fondos/fondo_17.jpg")',
 			logo: 'url("./img/logos/logo_17.png")',
 			sinopsis: 'Sinopsis 17',//
 			autor: 'Autor y año 17',
 			adjetivos: 'Adjetivos 17',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">PALATINO</span><br><br>',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">PALATINO</span><br><br>Historia<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Alejandra Rodríguez Zamora',//
 			anatomia_a: 'url("./img/anatomia/anatomia_17a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_17b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_17c.png")',
-		};//--------------------NO EXPONE: 1948 Palatino Alejandra
+		};//--------------------NO EXPONE: 1948 Palatino Alejandra Rodríguez Zamora
 		const serie_18 = {
 			fondo: 'url("./img/fondos/fondo_18.jpg")',
 			logo: 'url("./img/logos/logo_18.png")',
 			sinopsis: 'No todo es lo que parece, todos tenemos secretos. La alta sociedad del Siglo XV aparenta ser perfecta, sin embargo un escritor que se mueve entre las más altas esferas descubre algo que no debería.',//
 			autor: 'Hermann Zapf · 1952',
 			adjetivos: 'Humanista · Misterio · Afilada',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">OPTIMA</span><br><br>La tipografía Optima es una de las fuentes más distintivas del siglo XX, destacada por su elegancia y versatilidad. Fue diseñada por Hermann Zapf entre 1952 y 1955, y publicada por primera vez por la fundición D. Stempel AG en Alemania en 1958.<br><br>Aunque Optima parece una sans serif, sus formas tienen una influencia humanista y se basan en inscripciones romanas clásicas, lo que le da un aire de sofisticación y claridad. Presenta variaciones de grosor dentro de cada trazo, algo poco común en las sans serif tradicionales, lo que la hace visualmente rica y legible tanto en títulos como en textos corridos.<br><br>Zapf se inspiró en las letras talladas en una lápida en la iglesia de Santa Croce en Florencia, durante una visita a Italia. Le impresionó la forma en que las letras parecían sin serifas pero conservaban proporciones clásicas y detalles refinados.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">OPTIMA</span><br><br>La tipografía Optima es una de las fuentes más distintivas del siglo XX, destacada por su elegancia y versatilidad. Fue diseñada por Hermann Zapf entre 1952 y 1955, y publicada por primera vez por la fundición D. Stempel AG en Alemania en 1958.<br><br>Aunque Optima parece una sans serif, sus formas tienen una influencia humanista y se basan en inscripciones romanas clásicas, lo que le da un aire de sofisticación y claridad. Presenta variaciones de grosor dentro de cada trazo, algo poco común en las sans serif tradicionales, lo que la hace visualmente rica y legible tanto en títulos como en textos corridos.<br><br>Zapf se inspiró en las letras talladas en una lápida en la iglesia de Santa Croce en Florencia, durante una visita a Italia. Le impresionó la forma en que las letras parecían sin serifas pero conservaban proporciones clásicas y detalles refinados.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Ithaisa Luis Martín',//
 			anatomia_a: 'url("./img/anatomia/anatomia_18a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_18b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_18c.png")',
-		};//1952 Optima Ithaisa
+		};//1952 Optima Ithaisa Luis Martín
 		const serie_19 = {
 			fondo: 'url("./img/fondos/fondo_19.jpg")',
 			logo: 'url("./img/logos/logo_19.png")',
 			sinopsis: 'Émile, pintor sin firma, descubre la tipografía Mistral y empieza a usarla. Sus obras cobran vida. Conoce a Clara, calígrafa. Juntos firman en Mistral: él con pincel, ella con tinta.',//
 			autor: 'Roger Excoffon · 1953',
 			adjetivos: 'Caligráfica · Artística · Creativa',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MISTRAL</span><br><br>Mistral es una tipografía caligráfica diseñada en 1953 por el francés Roger Excoffon. Se inspira en su propia escritura a mano, con trazos fluidos, ligados y expresivos, como si el viento la hubiera dibujado.<br><br>El nombre viene del viento Mistral del sur de Francia, reflejando el movimiento y la energía de sus letras. Es ideal para títulos y diseños con carácter artístico o humano.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MISTRAL</span><br><br>Mistral es una tipografía caligráfica diseñada en 1953 por el francés Roger Excoffon. Se inspira en su propia escritura a mano, con trazos fluidos, ligados y expresivos, como si el viento la hubiera dibujado.<br><br>El nombre viene del viento Mistral del sur de Francia, reflejando el movimiento y la energía de sus letras. Es ideal para títulos y diseños con carácter artístico o humano.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Athenery González Montañez',//
 			anatomia_a: 'url("./img/anatomia/anatomia_19a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_19b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_19c.png")',
-		};//1953 Mistral Athenery
+		};//1953 Mistral Athenery González Montañez
 		const serie_20 = {
 			fondo: 'url("./img/fondos/fondo_20.jpg")',
 			logo: 'url("./img/logos/logo_20.png")',
 			sinopsis: 'Courier, el escriba implacable. Nacido en la era de las máquinas, su voz uniforme reveló secretos, juicios y confesiones. En un mundo digital, tecleará su verdad siempre.',//
 			autor: 'Howard &quot;Bud&quot; Kettler · 1955',
 			adjetivos: 'Mecánica · Técnica · Funcional',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COURIER</span><br><br>Courier fue diseñada en 1955 por Howard Kettler para IBM, con el objetivo de crear una tipografía legible y uniforme para máquinas de escribir. Su diseño monoespaciado, donde cada carácter ocupa el mismo espacio, refleja una estética funcional y mecánica. Courier se convirtió en el estándar para la escritura técnica, guiones y documentos legales. Aunque fue creada en un contexto analógico, ha mantenido su relevancia en la era digital por su claridad, neutralidad y evocación del pasado tecnológico.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COURIER</span><br><br>Courier fue diseñada en 1955 por Howard Kettler para IBM, con el objetivo de crear una tipografía legible y uniforme para máquinas de escribir. Su diseño monoespaciado, donde cada carácter ocupa el mismo espacio, refleja una estética funcional y mecánica. Courier se convirtió en el estándar para la escritura técnica, guiones y documentos legales. Aunque fue creada en un contexto analógico, ha mantenido su relevancia en la era digital por su claridad, neutralidad y evocación del pasado tecnológico.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Josefina Ñíguez De León',//
 			anatomia_a: 'url("./img/anatomia/anatomia_20a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_20b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_20c.png")',
-		};//1955 Courier Josefina
+		};//1955 Courier Josefina Ñíguez De León
 		const serie_21 = {
 			fondo: 'url("./img/fondos/fondo_21.jpg")',
 			logo: 'url("./img/logos/logo_21.png")',
 			sinopsis: 'Un mundo donde la paz, la tecnología y la naturaleza coexisten, está a punto de ser corrompido.',//
 			autor: 'Max Miedinger · 1957',
 			adjetivos: 'Neogrotesca · Sunpunk · Distópica',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">HELVETICA</span><br><br>La tipografía nace con la invención de la imprenta de tipos móviles por Gutenberg en el siglo XV, En el siglo XIX aparece la sans serif, más simple y sin adornos, y en el XX, el diseño tipográfico explota con el Estilo Suizo y la Bauhaus, buscando orden y funcionalidad. Tipos como Helvetica se vuelven símbolos de modernidad.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">HELVETICA</span><br><br>La tipografía nace con la invención de la imprenta de tipos móviles por Gutenberg en el siglo XV, En el siglo XIX aparece la sans serif, más simple y sin adornos, y en el XX, el diseño tipográfico explota con el Estilo Suizo y la Bauhaus, buscando orden y funcionalidad. Tipos como Helvetica se vuelven símbolos de modernidad.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Alondra Álvarez de León Machado',//
 			anatomia_a: 'url("./img/anatomia/anatomia_21a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_21b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_21c.png")',
-		};//1957 Helvetica Alondra
+		};//1957 Helvetica Alondra Álvarez de León Machado
 		const serie_22 = {
 			fondo: 'url("./img/fondos/fondo_22.jpg")',
 			logo: 'url("./img/logos/logo_22.png")',
 			sinopsis: 'Un experimento fallido financiado por un importante empresario abre un portal a múltiples realidades. Ahora, un joven deberá atravesar mundos paralelos hasta encontrar el suyo.',//
 			autor: 'Adrian Frutiger · 1957',
 			adjetivos: 'Neogrotesca · Thriller psicológico · Ficción',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">UNIVERS</span><br><br>Univers es una tipografía <em>sans serif</em> diseñada por Adrian Frutiger y lanzada en 1957 por la fundición Deberny & Peignot. Fue una de las primeras familias tipográficas planificadas como un sistema coherente con múltiples pesos y estilos, organizados de forma racional mediante un sistema numérico.<br><br>Su diseño limpio, funcional y de alta legibilidad la convirtió en una de las favoritas para el diseño gráfico moderno, especialmente en señalética, diseño corporativo y publicaciones técnicas. Univers refleja el espíritu del Estilo Tipográfico Internacional, también conocido como estilo suizo, y sigue siendo un referente del diseño tipográfico contemporáneo.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">UNIVERS</span><br><br>Univers es una tipografía <em>sans serif</em> diseñada por Adrian Frutiger y lanzada en 1957 por la fundición Deberny & Peignot. Fue una de las primeras familias tipográficas planificadas como un sistema coherente con múltiples pesos y estilos, organizados de forma racional mediante un sistema numérico.<br><br>Su diseño limpio, funcional y de alta legibilidad la convirtió en una de las favoritas para el diseño gráfico moderno, especialmente en señalética, diseño corporativo y publicaciones técnicas. Univers refleja el espíritu del Estilo Tipográfico Internacional, también conocido como estilo suizo, y sigue siendo un referente del diseño tipográfico contemporáneo.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Verónica Ciria Ayuso',//
 			anatomia_a: 'url("./img/anatomia/anatomia_22a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_22b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_22c.png")',
-		};//1957 Univers Vero
+		};//1957 Univers Verónica Ciria Ayuso
 		const serie_23 = {
 			fondo: 'url("./img/fondos/fondo_23.jpg")',
 			logo: 'url("./img/logos/logo_23.png")',
 			sinopsis: 'Año 2030, la creación de un juego con un mundo de realidad virtual global, en donde puedes interactuar con gente de todos lados, impacta en todo el planeta. Sin embargo, el futuro no tiene porque ser perfecto, y mucho menos en esta experiencia.',//
 			autor: 'Adrian Frutiger · 1988',
 			adjetivos: 'Geométrica · Futurista · Fantasiosa',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">AVENIR</span><br><br>Avenir fue creada por el legendario diseñador de fuentes suizo Adrian Frutiger (1928-2015), quien también creó Univers y la que lleva su apellido Frutiger. probó suerte en la escultura y en el diseño de fuentes desde muy joven y la influencia de las cursivas estrictas y formales que le enseñaron en sus días de estudiante lo impulsaron para crear alternativas más modernistas y revolucionarias.<br><br>Él trabajó solo en Avenir, sin la ayuda de asistentes legales y señaló que diseñó la fuente "pensando en la naturaleza humana". Avenir se lanzó en 1988 en tres grosores que posteriormente se expandió a una familia de seis grosores.<br><br>Frutiger a menudo se refería a Avenir como su obra maestra, describiéndola como "la tipografía más difícil en la que he trabajado". También se refería al proceso de crear fuentes sin serifa como "el principal trabajo de su vida", notando que las sin serifas eran más difíciles de diseñar que las fuentes con serifa debido a su marcada sencillez.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">AVENIR</span><br><br>Avenir fue creada por el legendario diseñador de fuentes suizo Adrian Frutiger (1928-2015), quien también creó Univers y la que lleva su apellido Frutiger. probó suerte en la escultura y en el diseño de fuentes desde muy joven y la influencia de las cursivas estrictas y formales que le enseñaron en sus días de estudiante lo impulsaron para crear alternativas más modernistas y revolucionarias.<br><br>Él trabajó solo en Avenir, sin la ayuda de asistentes legales y señaló que diseñó la fuente "pensando en la naturaleza humana". Avenir se lanzó en 1988 en tres grosores que posteriormente se expandió a una familia de seis grosores.<br><br>Frutiger a menudo se refería a Avenir como su obra maestra, describiéndola como "la tipografía más difícil en la que he trabajado". También se refería al proceso de crear fuentes sin serifa como "el principal trabajo de su vida", notando que las sin serifas eran más difíciles de diseñar que las fuentes con serifa debido a su marcada sencillez.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Daniela Rodríguez Pérez',//
 			anatomia_a: 'url("./img/anatomia/anatomia_23a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_23b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_23c.png")',
-		};//1988 Avenir Daniela
+		};//1988 Avenir Daniela Rodríguez Pérez
 		const serie_24 = {
 			fondo: 'url("./img/fondos/fondo_24.jpg")',
 			logo: 'url("./img/logos/logo_24.png")',
 			sinopsis: 'En plena guerra contra los dacios, el emperador Trajano lidera a Roma en una campaña épica de conquistas, enfrentando traiciones y batallas implacables para asegurar un legado eterno.',//
 			autor: 'Carol Twombly · 1989',
 			adjetivos: 'Old Style · Emocionante · Intensa',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">TRAJAN</span><br><br>La tipografía Trajan, diseñada en 1989 por Carol Twombly para Adobe, está inspirada en las inscripciones talladas en piedra de la Antigua Roma, especialmente en la Columna de Trajano, de donde toma su nombre. Es una tipografía serif, compuesta únicamente por letras mayúsculas, con un estilo elegante, solemne y clásico que evoca autoridad y tradición. Sus formas refinadas y proporciones equilibradas la han convertido en una favorita para carteles de películas, especialmente del género épico o histórico, así como en logos institucionales, portadas de libros y documentos ceremoniales. Trajan es una fuente de pago, disponible a través de Adobe y otras distribuidoras, y cuenta con variantes como Trajan Pro y Trajan Sans, que amplían su versatilidad manteniendo su esencia monumental.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">TRAJAN</span><br><br>La tipografía Trajan, diseñada en 1989 por Carol Twombly para Adobe, está inspirada en las inscripciones talladas en piedra de la Antigua Roma, especialmente en la Columna de Trajano, de donde toma su nombre. Es una tipografía serif, compuesta únicamente por letras mayúsculas, con un estilo elegante, solemne y clásico que evoca autoridad y tradición. Sus formas refinadas y proporciones equilibradas la han convertido en una favorita para carteles de películas, especialmente del género épico o histórico, así como en logos institucionales, portadas de libros y documentos ceremoniales. Trajan es una fuente de pago, disponible a través de Adobe y otras distribuidoras, y cuenta con variantes como Trajan Pro y Trajan Sans, que amplían su versatilidad manteniendo su esencia monumental.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Esther Rodríguez Herrera',//
 			anatomia_a: 'url("./img/anatomia/anatomia_24a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_24b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_24c.png")',
-		};//1989 Trajan Esther
+		};//1989 Trajan Esther Rodríguez Herrera
 		const serie_25 = {
 			fondo: 'url("./img/fondos/fondo_25.jpg")',
 			logo: 'url("./img/logos/logo_25.png")',
 			sinopsis: 'Un grupo de adolescentes de los 90 viaja accidentalmente al Renacimiento tardío, donde deberán encajar, sobrevivir y evitar alterar la Historia para poder regresar a casa.',//
 			autor: 'Robert Slimbach · 1990',
 			adjetivos: 'Humanista · Misterio · Aventura',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MINION</span><br><br>Inspirada en las tipografías antiguas del renacimiento tardío, esta tipografía diseñada por Robert Slimbach en 1990 para Adobe conserva la belleza, elegancia y legibilidad propia de los diseños de esa época. Fue creada originalmente como tipografía de texto pero se adapta perfectamente a la tecnología digital. Su amplia familia, formada de varios pesos y anchos, caracteres especiales y ornamentos la convierten en un tipo tremendamente flexible y funcional, muy útil para cualquier tipo de texto por su gran legibilidad, equilibrio y claridad.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MINION</span><br><br>Inspirada en las tipografías antiguas del renacimiento tardío, esta tipografía diseñada por Robert Slimbach en 1990 para Adobe conserva la belleza, elegancia y legibilidad propia de los diseños de esa época. Fue creada originalmente como tipografía de texto pero se adapta perfectamente a la tecnología digital. Su amplia familia, formada de varios pesos y anchos, caracteres especiales y ornamentos la convierten en un tipo tremendamente flexible y funcional, muy útil para cualquier tipo de texto por su gran legibilidad, equilibrio y claridad.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Carla Barrera Afonso',//
 			anatomia_a: 'url("./img/anatomia/anatomia_25a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_25b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_25c.png")',
-		};//1990 Minion Carla
+		};//1990 Minion Carla Barrera Afonso
 		const serie_26 = {
 			fondo: 'url("./img/fondos/fondo_26.jpg")',
 			logo: 'url("./img/logos/logo_26.png")',
 			sinopsis: 'Una IA ofrece a Ana todo lo que siempre quiso, pero pronto descubre que tiene un pequeño problema: ¿Puede escapar de su propia mente, o la IA ya la ha atrapado para siempre?',//
 			autor: 'Herb Lubalin · 1991',
 			adjetivos: 'Geométrica · Tecnología · Ambición',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CENTURY GOTHIC</span><br><br>La tipografía Century Gothic recibe su nombre de la tradición tipográfica que denomina &quot;góticas&quot; a las fuentes sin serifas, es decir, aquellas que carecen de remates en los trazos. Aunque el término &quot;gótico&quot; proviene originalmente del arte medieval, en tipografía se utiliza para describir estilos sans-serif, modernos y limpios. Esta se inspira en la familia tipográfica Century, de principios del siglo XX. A pesar de no estar relacionada con el estilo gótico tradicional, su nombre refleja esta convención tipográfica basada en la evolución del diseño de fuentes.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">CENTURY GOTHIC</span><br><br>La tipografía Century Gothic recibe su nombre de la tradición tipográfica que denomina &quot;góticas&quot; a las fuentes sin serifas, es decir, aquellas que carecen de remates en los trazos. Aunque el término &quot;gótico&quot; proviene originalmente del arte medieval, en tipografía se utiliza para describir estilos sans-serif, modernos y limpios. Esta se inspira en la familia tipográfica Century, de principios del siglo XX. A pesar de no estar relacionada con el estilo gótico tradicional, su nombre refleja esta convención tipográfica basada en la evolución del diseño de fuentes.<br><br><span style="font-weight: 700;">Autor de la propuesta:</span> Luis David Polisano Herrera',//
 			anatomia_a: 'url("./img/anatomia/anatomia_26a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_26b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_26c.png")',
-		};//1991 Century Gothic Luis David
+		};//1991 Century Gothic Luis David Polisano Herrera
 		const serie_27 = {
 			fondo: 'url("./img/fondos/fondo_27.jpg")',
 			logo: 'url("./img/logos/logo_27.png")',
 			sinopsis: 'Sinopsis 27',//
 			autor: 'Autor y año 27',
 			adjetivos: 'Adjetivos 27',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COMIC SANS</span><br><br>',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">COMIC SANS</span><br><br>Historia<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Alejandra Rodríguez Zamora',//
 			anatomia_a: 'url("./img/anatomia/anatomia_27a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_27b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_27c.png")',
-		};//--------------------NO EXPONE: 1994 Comic Sans Alejandra
+		};//--------------------NO EXPONE: 1994 Comic Sans Alejandra Rodríguez Zamora
 		const serie_29 = {
 			fondo: 'url("./img/fondos/fondo_29.jpg")',
 			logo: 'url("./img/logos/logo_29.png")',
 			sinopsis: 'Un mundo donde la paz, la tecnología y la naturaleza coexisten, está a punto de ser corrompido.',//
 			autor: 'Matthew Carter · 1996',
 			adjetivos: 'Sans-serif Humanista · iA · Distópica',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">VERDANA</span><br><br>Verdana fue diseñada en 1996 por Matthew Carter para Microsoft, con el objetivo de crear una tipografía altamente legible en pantalla, Verdana fue creada desde cero para el pixel: formas amplias, trazos simples, y mucho espacio entre letras.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">VERDANA</span><br><br>Verdana fue diseñada en 1996 por Matthew Carter para Microsoft, con el objetivo de crear una tipografía altamente legible en pantalla, Verdana fue creada desde cero para el pixel: formas amplias, trazos simples, y mucho espacio entre letras.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Alondra Álvarez de León Machado',//
 			anatomia_a: 'url("./img/anatomia/anatomia_29a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_29b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_29c.png")',
-		};//1996 Verdana Alondra
+		};//1996 Verdana Alondra Álvarez de León Machado
 		const serie_30 = {
 			fondo: 'url("./img/fondos/fondo_30.jpg")',
 			logo: 'url("./img/logos/logo_30.png")',
 			sinopsis: 'Lucía descubre una sala secreta en un museo donde los objetos cobran vida, y queda atrapada en una conspiración que amenaza con cambiar el pasado y borrar el presente.',//
 			autor: 'Jos Buivenga · 2008',
 			adjetivos: 'Híbrida · Suspense · Misterio',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MUSEO</span><br><br>Jos Buivenga vive y trabaja en Arnhem. Empezó a diseñar tipografías en 1994 y fundó su exljbris Font Foundry diez años después. Es conocido principalmente por su familia tipográfica Museo y también por su forma de comercializar sus tipos.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MUSEO</span><br><br>Jos Buivenga vive y trabaja en Arnhem. Empezó a diseñar tipografías en 1994 y fundó su exljbris Font Foundry diez años después. Es conocido principalmente por su familia tipográfica Museo y también por su forma de comercializar sus tipos.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Carla Barrera Afonso',//
 			anatomia_a: 'url("./img/anatomia/anatomia_30a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_30b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_30c.png")',
-		};//2008 Museo Carla
+		};//2008 Museo Carla Barrera Afonso
 		const serie_31 = {
 			fondo: 'url("./img/fondos/fondo_31.jpg")',
 			logo: 'url("./img/logos/logo_31.png")',
 			sinopsis: 'Un detective enfrentado a un asesinato sin resolver descubre una red de secretos que oscurecen toda la ciudad. Misterio, tensión y verdad se entrelazan en cada paso.',//
 			autor: 'Hannes von Döhren · 2010',
 			adjetivos: 'Geométrica · Misterio · Thriller',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BRANDON GROTESQUE</span><br><br>La tipografía Brandon Grotesque fue diseñada en 2010 por Hannes von Döhren, de la fundición HVD Fonts. Se inspira en las tipografías geométricas de los años 20 y 30, con un estilo Art Déco. Combina formas limpias con detalles suaves y cálidos. Es muy usada en branding por su elegancia y legibilidad. También cuenta con versiones como Brandon Text para mejor lectura en tamaños pequeños.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BRANDON GROTESQUE</span><br><br>La tipografía Brandon Grotesque fue diseñada en 2010 por Hannes von Döhren, de la fundición HVD Fonts. Se inspira en las tipografías geométricas de los años 20 y 30, con un estilo Art Déco. Combina formas limpias con detalles suaves y cálidos. Es muy usada en branding por su elegancia y legibilidad. También cuenta con versiones como Brandon Text para mejor lectura en tamaños pequeños.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Enya Hernández Rodríguez',//
 			anatomia_a: 'url("./img/anatomia/anatomia_31a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_31b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_31c.png")',
-		};//2010 Brandon Grotesque Enya
+		};//2010 Brandon Grotesque Enya Hernández Rodríguez
 		const serie_32 = {
 			fondo: 'url("./img/fondos/fondo_32.jpg")',
 			logo: 'url("./img/logos/logo_32.png")',
 			sinopsis: 'Sinopsis 32',//
 			autor: 'Autor y año 32',
 			adjetivos: 'Adjetivos 32',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BEBAS NEUE</span><br><br>',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">BEBAS NEUE</span><br><br>Historia<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Dafne Hernández Chica',//
 			anatomia_a: 'url("./img/anatomia/anatomia_32a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_32b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_32c.png")',
-		};//--------------------NO EXPONE: 2010 Bebas Neue Dafne
+		};//--------------------NO EXPONE: 2010 Bebas Neue Dafne Hernández Chica
 		const serie_33 = {
 			fondo: 'url("./img/fondos/fondo_33.jpg")',
 			logo: 'url("./img/logos/logo_33.png")',
 			sinopsis: 'Carlos, un escalador en busca de redención, queda atrapado en Montserrat, enfrentándose a sus demonios internos. Elena, su amiga, lucha por salvarlo, mientras la montaña revela oscuros secretos.',//
 			autor: 'Julieta Ulanovsky · 2011',
 			adjetivos: 'Geométrica · Intriga · Sombría',
-			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MONTSERRAT</span><br><br>Montserrat es una tipografía sans-serif creada en 2011 por la diseñadora argentina Julieta Ulanovsky. Su diseño se inspira en los antiguos carteles y rótulos del barrio Montserrat de Buenos Aires, con la intención de rescatar ese estilo urbano clásico y adaptarlo a un formato moderno y funcional.<br><br>Con un estilo geométrico, limpio y contemporáneo, Montserrat se caracteriza por su alta legibilidad y su estética profesional. Es ideal para uso en diseño web, branding, títulos, publicidad y diseño editorial, tanto en pantallas como en impresos.<br><br>La familia tipográfica ha crecido considerablemente desde su lanzamiento e incluye múltiples pesos y estilos, desde Thin hasta Black, además de versiones itálicas. También existen variantes como Montserrat Alternates y Montserrat Subrayada, que ofrecen opciones más decorativas.',//
+			historia: '<div id="contenedor_anatomia"><div id="anatomia_a" class="anatomia"></div><div id="anatomia_b" class="anatomia"></div><div id="anatomia_c" class="anatomia"></div></div><span style="font-size: 22px; font-weight: 700;">MONTSERRAT</span><br><br>Montserrat es una tipografía sans-serif creada en 2011 por la diseñadora argentina Julieta Ulanovsky. Su diseño se inspira en los antiguos carteles y rótulos del barrio Montserrat de Buenos Aires, con la intención de rescatar ese estilo urbano clásico y adaptarlo a un formato moderno y funcional.<br><br>Con un estilo geométrico, limpio y contemporáneo, Montserrat se caracteriza por su alta legibilidad y su estética profesional. Es ideal para uso en diseño web, branding, títulos, publicidad y diseño editorial, tanto en pantallas como en impresos.<br><br>La familia tipográfica ha crecido considerablemente desde su lanzamiento e incluye múltiples pesos y estilos, desde Thin hasta Black, además de versiones itálicas. También existen variantes como Montserrat Alternates y Montserrat Subrayada, que ofrecen opciones más decorativas.<br><br><span style="font-weight: 700;">Autora de la propuesta:</span> Esther Rodríguez Herrera',//
 			anatomia_a: 'url("./img/anatomia/anatomia_33a.png")',
 			anatomia_b: 'url("./img/anatomia/anatomia_33b.png")',
 			anatomia_c: 'url("./img/anatomia/anatomia_33c.png")',
-		};//2011 Montserrat Esther
+		};//2011 Montserrat Esther Rodríguez Herrera
 		
 	</script>
 	
 	<script></script>
-	<script>		
-		
-		/* ----- LO DEL SCROLL UP-DOWN ----- */
-	    const contenedor_nav = document.getElementById('contenedor_nav');
+	<script>
 
-	window.addEventListener('wheel', (e) => {
+	    const contenedor_nav = document.getElementById('contenedor_nav');
+		
+		/* ----- LO DEL SCROLL HORIZONTAL INCLUSO FUERA DEL DIV ----- */
+	    window.addEventListener('wheel', (e) => {
 	      // Solo actuamos si hay desplazamiento horizontal
 	      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
 	        // Desplazamos el scroll interno de contenedor_nav
@@ -1691,8 +1683,9 @@
 	        // Opcional: prevenir que la página intente hacer scroll vertical accidental
 	        e.preventDefault();
 	      }
-	    }, { passive: false }); // Necesitamos passive: false para poder usar e.preventDefault()	
+	    }, { passive: false }); // Necesitamos passive: false para poder usar e.preventDefault()		
 		
+		/* ----- LO DEL SCROLL UP-DOWN ----- */
 	    const pop_up = document.getElementById('pop_up');
 
 	    let hoverActivo = false;
